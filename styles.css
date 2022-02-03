@@ -1,3 +1,27 @@
+@font-face {
+  font-family: RetroComputer;
+  src: url("fonts/retro_computer_personal_use.ttf");
+}
+
+@font-face: {
+  font-family: Offsett;
+  src: url("fonts/offsett/OffsettDemoRegular.ttf");
+}
+
+@font-face: {
+  font-family: RadioSpaceBitmap;
+  src: url("fonts/radio-space-bitmap/radiospacebitmap.ttf");
+}
+
 *{
-  
+  background-color: black;
+  color: #33FF00;
+}
+
+h1 {
+  font-family: OffsettRegular;
+}
+
+p, ul {
+  font-family: RadioSpaceBitmap;
 }
