@@ -29,18 +29,18 @@
 
 }
 
-@media screen and (min-width: 960px) {
-  html {
-    margin-left: calc(100vw - 100%);
-    margin-right: 0;
-  }
-}
-
 html, body {
   margin: 0;
   padding: 0;
   height: 100%;
   min-height: 100%;
+}
+
+@media screen and (min-width: 960px) {
+  html {
+    margin-left: calc(100vw - 100%);
+    margin-right: 0;
+  }
 }
 
 body {
@@ -194,6 +194,10 @@ tr {
 
 .header-row {
   border-top: hidden;
+}
+
+.bottom-row {
+  border-bottom: hidden;
 }
 
 th {
