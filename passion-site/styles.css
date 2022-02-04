@@ -20,12 +20,20 @@
 
   Muave: #D5AFF1
   Amethyst: #AB69DB
+  Blue Violet: #7E2EED
 
   pink: #F6BCC7
 */
 
 * {
 
+}
+
+@media screen and (min-width: 960px) {
+  html {
+    margin-left: calc(100vw - 100%);
+    margin-right: 0;
+  }
 }
 
 html, body {
@@ -46,6 +54,25 @@ body {
   background: #B9E2F0;
 }
 
+h1 {
+  font-family: comiccomoc;
+  font-size: 60px;
+  margin: 0;
+}
+
+h2 {
+  font-family: comiccomoc;
+  font-size: 40px;
+  margin: 0;
+}
+
+p {
+  font-family: PinkChicken;
+  font-size: 20px;
+}
+
+/*  NAV BAR */
+
 nav {
   background: #B9E2F0;
   box-shadow: 0 4px 12px -8px;
@@ -56,12 +83,9 @@ nav {
 }
 
 nav h1 {
-  font-family: comiccomoc;
-  font-size: 60px;
-  color: #AB69DB;
+  color: #7E2EED;
   padding-left: 240px;
-  position: relative;
-  bottom: 36px;
+  margin: 16px 0;
   float: left;
 }
 
@@ -70,25 +94,32 @@ nav .nav-buttons {
   padding-right: 240px;
   display: inline;
   position: relative;
-  top: 36px;
 }
 
 nav a {
   font-family: PinkChicken;
   font-size: 20px;
+  text-align: center;
   color: #3423A6;
+  border: solid 1px #62BFED;
   text-decoration: none;
-  padding: 0 40px 0 40px;
+  display: inline-block;
+  min-width: 100px;
+  padding: 32px 8px;
+  margin: 6px 0;
   transition: ease-in-out .2s;
 }
 
 nav a:hover {
-  color: #AB69DB;
+  color: #B9E2F0;
+  background-color: #62BFED;
 }
 
 .active {
   text-decoration: underline;
 }
+
+/*  HOME PAGE */
 
 .content {
   width: 100%;
@@ -112,27 +143,57 @@ nav a:hover {
   padding: 0 0 12px 24px
 }
 
+/*  CATALOGUE PAGE  */
+
 .catalogue {
   padding: 40px 0;
   position: relative;
   top: 100px;
   width: 100%;
-  display: flex;
-  justify-content: center;
 }
 
-.catalogue img {
-  object-fit: contain;
+.catalogue h2, .catalogue p {
+  display: block;
+  justify-content: center;
+  text-align: center;
+  margin: 12px 0;
+}
+
+.catalogue h2 {
+  color: #7E2EED;
+}
+
+.catalogue p {
+  color: #3423A6;
+  padding: 0 0 40px 0;
 }
 
 table {
-  border: hidden;
-  border-collapse: collapse;
+  display: flex;
+  justify-content: center;
+  border: hidden !important;
+  border-collapse: collapse !important;
+}
+
+table img {
+  background-color: white;
+  border: 2px white solid;
+  object-fit: contain;
 }
 
 th, td {
   border: 2px solid #62BFED;
   border-collapse: collapse;
+  padding: 16px 16px
+}
+
+tr {
+  border-right: hidden;
+  border-left: hidden;
+}
+
+.header-row {
+  border-top: hidden;
 }
 
 th {
@@ -144,6 +205,26 @@ td {
   font-family: PinkChicken;
   font-size: 20px;
   color: #3423A6;
+  max-width: 600px;
+  text-align: center;
+}
+
+.highlight {
+  transition: ease-in-out .2s;
+}
+
+.highlight:hover {
+  background-color: white;
+}
+
+/* WISHLIST PAGE */
+
+.wishlist {
+  padding: 40px 0;
+  position: relative;
+  top: 100px;
+  width: 100%;
+  text-align: center;
 }
 
 /*.catalogue ul {

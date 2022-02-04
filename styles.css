@@ -1,16 +1,18 @@
 @font-face {
   font-family: RetroComputer;
-  src: url("fonts/retro_computer_personal_use.ttf");
+  src: url('fonts/retro_computer_personal_use.ttf');
 }
 
-@font-face: {
-  font-family: Offsett;
-  src: url("fonts/offsett/OffsettDemoRegular.ttf");
+@font-face {
+  font-family: OffsettRegular;
+  src: url('fonts/offsett/OffsettRegular.ttf');
 }
 
-@font-face: {
-  font-family: RadioSpaceBitmap;
-  src: url("fonts/radio-space-bitmap/radiospacebitmap.ttf");
+@font-face {
+  font-family: radiospacebitmap;
+  src: url('fonts/radio-space-bitmap/radiospacebitmap.woff2') format('woff2'), url('fonts/radio-space-bitmap/radiospacebitmapp.woff') format('woff');
+  font-weight: normal;
+  font-syle: normal;
 }
 
 *{
@@ -23,5 +25,5 @@ h1 {
 }
 
 p, ul {
-  font-family: RadioSpaceBitmap;
+  font-family: radiospacebitmap;
 }
