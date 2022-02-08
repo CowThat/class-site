@@ -14,15 +14,16 @@
 }
 
 /* colors
-  light blue: #B9E2F0
-  Maya blue: #62BFED
-  Blue Pantone: #3423A6
+  light B1ue: #B9E2F0
+  Baby B1ue: #8ED1EF
+  Maya B1ue: #62BFED
+  B1ue Pantone: #3423A6
 
   Muave: #D5AFF1
   Amethyst: #AB69DB
-  Blue Violet: #7E2EED
+  B1ue Vi0let: #7E2EED
 
-  pink: #F6BCC7
+  P1nk: #F6BCC7
 */
 
 * {
@@ -35,6 +36,8 @@ html, body {
   height: 100%;
   min-height: 100%;
 }
+
+/* ALL PAGES */
 
 @media screen and (min-width: 960px) {
   html {
@@ -69,6 +72,7 @@ h2 {
 p {
   font-family: PinkChicken;
   font-size: 20px;
+  color: #3423A6;
 }
 
 /*  NAV BAR */
@@ -121,6 +125,11 @@ nav a:hover {
 
 /*  HOME PAGE */
 
+.decoration {
+  border: dotted 12px white;
+  padding: 0 20px;
+}
+
 .content {
   width: 100%;
   display: flex;
@@ -131,16 +140,16 @@ nav a:hover {
 .content p {
   font-family: PinkChicken;
   font-size: 20px;
-  color: #3423A6;
   background: #B9E2F0;
-  border: dotted 4px white;
+  border: solid 1px #62BFED;
   width: 620px;
   text-align: justify;
-  padding: 60px 120px 60px 120px;
+  padding: 60px 100px;
 }
 
 .content img {
-  padding: 0 0 12px 24px
+  border: solid 2px white;
+  margin: 0 0 12px 24px
 }
 
 /*  CATALOGUE PAGE  */
@@ -165,7 +174,7 @@ nav a:hover {
 
 .catalogue p {
   color: #3423A6;
-  padding: 0 0 40px 0;
+  padding: 0 400px 40px 400px;
 }
 
 table {
@@ -177,14 +186,16 @@ table {
 
 table img {
   background-color: white;
-  border: 2px white solid;
+  border: solid 1px white;
+  width: 100px;
+  height: 100px;
   object-fit: contain;
 }
 
 th, td {
-  border: 2px solid #62BFED;
+  border: solid 1px #62BFED;
   border-collapse: collapse;
-  padding: 16px 16px
+  padding: 16px;
 }
 
 tr {
@@ -209,8 +220,12 @@ td {
   font-family: PinkChicken;
   font-size: 20px;
   color: #3423A6;
-  max-width: 600px;
+  width: 140px;
   text-align: center;
+}
+
+.description {
+  width: 400px;
 }
 
 .highlight {
@@ -218,7 +233,7 @@ td {
 }
 
 .highlight:hover {
-  background-color: white;
+  background-color: #8ED1EF;
 }
 
 /* WISHLIST PAGE */
@@ -230,6 +245,7 @@ td {
   width: 100%;
   text-align: center;
 }
+
 
 /*.catalogue ul {
   list-style: none;
