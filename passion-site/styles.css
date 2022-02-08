@@ -26,9 +26,25 @@
   P1nk: #F6BCC7
 */
 
+
+
 * {
 
 }
+
+/*
+
+
+
+
+
+ALL PAGES
+
+
+
+
+
+*/
 
 html, body {
   margin: 0;
@@ -36,8 +52,6 @@ html, body {
   height: 100%;
   min-height: 100%;
 }
-
-/* ALL PAGES */
 
 @media screen and (min-width: 960px) {
   html {
@@ -60,12 +74,14 @@ body {
 h1 {
   font-family: comiccomoc;
   font-size: 60px;
+  color: #7E2EED;
   margin: 0;
 }
 
 h2 {
   font-family: comiccomoc;
   font-size: 40px;
+  color: #7E2EED;
   margin: 0;
 }
 
@@ -73,9 +89,26 @@ p {
   font-family: PinkChicken;
   font-size: 20px;
   color: #3423A6;
+  margin: 0;
 }
 
-/*  NAV BAR */
+ul, li {
+  margin: 0;
+}
+
+/*
+
+
+
+
+
+NAV BAR
+
+
+
+
+
+*/
 
 nav {
   background: #B9E2F0;
@@ -123,18 +156,30 @@ nav a:hover {
   text-decoration: underline;
 }
 
-/*  HOME PAGE */
+/*
+
+
+
+
+
+ HOME PAGE
+
+
+
+
+
+ */
 
 .decoration {
   border: dotted 12px white;
-  padding: 0 20px;
+  padding: 20px;
 }
 
 .content {
   width: 100%;
   display: flex;
   justify-content: center;
-  padding: 260px 0 40px 0;
+  padding: 220px 0 40px 0;
 }
 
 .content p {
@@ -152,12 +197,24 @@ nav a:hover {
   margin: 0 0 12px 24px
 }
 
-/*  CATALOGUE PAGE  */
+/*
+
+
+
+
+
+CATALOGUE PAGE
+
+
+
+
+
+ */
 
 .catalogue {
   padding: 40px 0;
   position: relative;
-  top: 100px;
+  top: 80px;
   width: 100%;
 }
 
@@ -185,8 +242,6 @@ table {
 }
 
 table img {
-  background-color: white;
-  border: solid 1px white;
   width: 100px;
   height: 100px;
   object-fit: contain;
@@ -236,7 +291,23 @@ td {
   background-color: #8ED1EF;
 }
 
-/* WISHLIST PAGE */
+[data-href] {
+  cursor: pointer;
+}
+
+/*
+
+
+
+
+
+WISHLIST PAGE
+
+
+
+
+
+ */
 
 .wishlist {
   padding: 40px 0;
@@ -246,37 +317,67 @@ td {
   text-align: center;
 }
 
+/*
 
-/*.catalogue ul {
-  list-style: none;
 
-}
 
-.catalogue li {
-  color: blue;
-  display: flex;
-  padding: 0 0 8px 0;
-}
 
-.catalogue a {
-  font-family: PinkChicken;
-  font-size: 40px;
-  color: #AB69DB;
-  text-decoration: none;
-  text-align: left;
-  background-color: #F6BCC7;
-  border: outset 4px white;
-  padding: 10px 360px 10px 360px;
-  height: 60px;
+
+BIOGRAPHY PAGE
+
+
+
+
+
+*/
+
+.biography {
+  position: relative;
+  top: 100px;
+  width: 100%;
   display: flex;
   justify-content: center;
-  align-items: center;
-  width: 100%;
+}
+
+.biography-container {
+  display: block;
+  width: 50%;
+}
+
+.biography img {
+  float: left;
+  height: 400px;
+  width: 400px;
+  margin: 0 80px 80px 0;
+}
+
+.biography-content h2{
+  margin: 0 0 12px 0;
+}
+
+.biography-container p a {
+  text-decoration: none;
+  display: block;
+  margin: 40px 0;
   transition: ease-in-out .2s;
 }
 
-.catalogue a:hover {
-  background-color: #D5AFF1;
-  color: white;
+.biography-container p a:hover span {
+  text-decoration: underline;
 }
-*/
+
+.biography-content ul {
+  list-style: inside;
+}
+
+.biography-content li {
+  font-family: PinkChicken;
+  font-size: 24px;
+  color: #3423A6;
+  margin: 0;
+}
+
+.biography-content li span {
+  font-family: HappyChicken;
+  font-size: 20px;
+}
