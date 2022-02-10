@@ -1,3 +1,16 @@
+/*
+
+
+
+
+
+FONTS
+
+
+
+
+*/
+
 @font-face {
   font-family: comiccomoc;
   src: url(fonts/comiccomoc.ttf)
@@ -13,24 +26,21 @@
   src: url(fonts/happy_chicken/HappyChicken.ttf);
 }
 
-/* colors
-  light B1ue: #B9E2F0
-  Baby B1ue: #8ED1EF
-  Maya B1ue: #62BFED
-  B1ue Pantone: #3423A6
+/*
 
-  Muave: #D5AFF1
-  Amethyst: #AB69DB
-  B1ue Vi0let: #7E2EED
+light B1ue: #B9E2F0
+Baby B1ue: #8ED1EF
+Maya B1ue: #62BFED
+B1ue Pantone: #3423A6
 
-  P1nk: #F6BCC7
+Muave: #D5AFF1
+Amethyst: #AB69DB
+B1ue Vi0let: #7E2EED
+Dark Purp1e: #380A77
+
+P1nk: #F6BCC7
+
 */
-
-
-
-* {
-
-}
 
 /*
 
@@ -46,13 +56,11 @@ ALL PAGES
 
 */
 
-html, body {
-  margin: 0;
-  padding: 0;
-  height: 100%;
-  min-height: 100%;
+* {
+  box-sizing: border-box;
 }
 
+/*fixes nav bar being moved by scroll bar*/
 @media screen and (min-width: 960px) {
   html {
     margin-left: calc(100vw - 100%);
@@ -60,11 +68,18 @@ html, body {
   }
 }
 
+html, body {
+  padding: 0;
+  margin: 0;
+  min-height: 100%;
+}
+
 body {
   background-image: url(photos/pile.jpeg);
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
+  margin-top: 140px;
 }
 
 .blue {
@@ -113,35 +128,34 @@ NAV BAR
 nav {
   background: #B9E2F0;
   box-shadow: 0 4px 12px -8px;
-  height: 100px;
   width: 100%;
+  height: 100px;
   position: fixed;
+  top:0;
   z-index:999;
 }
 
 nav h1 {
-  color: #7E2EED;
   padding-left: 240px;
   margin: 16px 0;
   float: left;
 }
 
 nav .nav-buttons {
-  float: right;
   padding-right: 240px;
+  float: right;
   display: inline;
-  position: relative;
 }
 
 nav a {
   font-family: PinkChicken;
   font-size: 20px;
-  text-align: center;
   color: #3423A6;
+  text-align: center;
   border: solid 1px #62BFED;
   text-decoration: none;
   display: inline-block;
-  min-width: 100px;
+  width: 100px;
   padding: 32px 8px;
   margin: 6px 0;
   transition: ease-in-out .2s;
@@ -149,7 +163,7 @@ nav a {
 
 nav a:hover {
   color: #B9E2F0;
-  background-color: #62BFED;
+  background: #62BFED;
 }
 
 .active {
@@ -170,25 +184,19 @@ nav a:hover {
 
  */
 
-.decoration {
-  border: dotted 12px white;
-  padding: 20px;
-}
-
 .content {
-  width: 100%;
-  display: flex;
-  justify-content: center;
-  padding: 220px 0 40px 0;
+  border: dotted 12px white;
+  width: 800px;
+  padding: 20px;
+  margin: 0 auto;
 }
 
 .content p {
   font-family: PinkChicken;
   font-size: 20px;
+  text-align: justify;
   background: #B9E2F0;
   border: solid 1px #62BFED;
-  width: 620px;
-  text-align: justify;
   padding: 60px 100px;
 }
 
@@ -212,33 +220,38 @@ CATALOGUE PAGE
  */
 
 .catalogue {
-  padding: 40px 0;
-  position: relative;
-  top: 80px;
-  width: 100%;
+  margin: 0 auto;
+  max-width: 1200px;
 }
 
-.catalogue h2, .catalogue p {
-  display: block;
-  justify-content: center;
+.catalogue-description {
+  margin: 0 auto 40px auto;
   text-align: center;
-  margin: 12px 0;
 }
 
-.catalogue h2 {
-  color: #7E2EED;
+.biography-column {
+  width: 400px;
 }
 
-.catalogue p {
-  color: #3423A6;
-  padding: 0 400px 40px 400px;
-}
+/*
+
+
+
+
+
+TABLES
+
+
+
+
+
+*/
+
+
 
 table {
-  display: flex;
-  justify-content: center;
-  border: hidden !important;
-  border-collapse: collapse !important;
+  margin: 0 auto;
+  border-collapse: collapse;
 }
 
 table img {
@@ -249,10 +262,24 @@ table img {
 
 th, td {
   border: solid 1px #62BFED;
-  border-collapse: collapse;
   padding: 16px;
+  width: 160px;
+  min-width: 40px;
 }
 
+th {
+  font-family: HappyChicken;
+  color: #3423A6;
+}
+
+td {
+  font-family: PinkChicken;
+  font-size: 20px;
+  color: #3423A6;
+  text-align: center;
+}
+
+/*hides the borders of the table*/
 tr {
   border-right: hidden;
   border-left: hidden;
@@ -266,32 +293,12 @@ tr {
   border-bottom: hidden;
 }
 
-th {
-  font-family: HappyChicken;
-  color: #3423A6;
-}
-
-td {
-  font-family: PinkChicken;
-  font-size: 20px;
-  color: #3423A6;
-  width: 140px;
-  text-align: center;
-}
-
-.description {
-  width: 400px;
-}
-
-.highlight {
+.highlight-row {
   transition: ease-in-out .2s;
 }
 
-.highlight:hover {
-  background-color: #8ED1EF;
-}
-
-[data-href] {
+.highlight-row:hover {
+  background: #8ED1EF;
   cursor: pointer;
 }
 
@@ -307,14 +314,16 @@ WISHLIST PAGE
 
 
 
- */
+*/
 
 .wishlist {
-  padding: 40px 0;
-  position: relative;
-  top: 100px;
-  width: 100%;
+  margin: 0 auto;
   text-align: center;
+  width: 800px;
+}
+
+.wishlist p {
+  margin: 0 auto 40px auto;
 }
 
 /*
@@ -332,14 +341,8 @@ BIOGRAPHY PAGE
 */
 
 .biography {
-  position: relative;
-  top: 100px;
-  width: 100%;
-  display: flex;
-  justify-content: center;
-}
-
-.biography-container {
+  width: 800px;
+  margin: 0 auto;
   display: block;
   width: 50%;
 }
@@ -348,23 +351,55 @@ BIOGRAPHY PAGE
   float: left;
   height: 400px;
   width: 400px;
-  margin: 0 80px 80px 0;
+  margin: 0 60px 20px 0;
+  object-fit: contain;
 }
 
-.biography-content h2{
-  margin: 0 0 12px 0;
-}
-
-.biography-container p a {
-  text-decoration: none;
+.back-to-catalogue {
   display: block;
   margin: 40px 0;
-  transition: ease-in-out .2s;
 }
 
-.biography-container p a:hover span {
-  text-decoration: underline;
+.biography a {
+  text-decoration: none;
+  transition: ease-in-out .2s;
+  color: #3423A6;
 }
+
+.biography a:hover {
+  text-decoration: underline;
+  color: #3423A6;
+}
+
+.biography a:visited {
+  color: #3423A6;
+}
+
+.biography-content table {
+  margin: 0;
+}
+
+.biography-content th {
+  font-family: HappyChicken;
+  align-text: right;
+  width: 240px;
+}
+
+.biography-content td {
+  align-text: left;
+  width: 400px;
+}
+
+.about {
+  margin-top: 40px;
+  line-height: 24px;
+}
+
+.about span {
+  font-family: HappyChicken;
+}
+
+/*
 
 .biography-content ul {
   list-style: inside;
@@ -381,3 +416,5 @@ BIOGRAPHY PAGE
   font-family: HappyChicken;
   font-size: 20px;
 }
+
+*/
