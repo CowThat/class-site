@@ -188,7 +188,7 @@ nav a:hover {
   border: dotted 12px white;
   width: 800px;
   padding: 20px;
-  margin: 0 auto;
+  margin: 200px auto 0 auto;
 }
 
 .content p {
