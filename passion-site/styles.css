@@ -399,6 +399,20 @@ BIOGRAPHY PAGE
   font-family: HappyChicken;
 }
 
+.about a {
+  color: #7E2EED;
+  text-decoration: underline;
+}
+
+.about a:visited {
+  color: #7E2EED;
+}
+
+.about a:hover {
+  color: #3423A6;
+  text-decoration: underline;
+}
+
 /*
 
 .biography-content ul {
