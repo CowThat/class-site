@@ -1,0 +1,156 @@
+* {
+  box-sizing: border-box;
+}
+
+.flexbox {
+  background: rgb(13, 166, 129);
+  padding: 20px;
+  margin: 20px;
+  display: flex;
+  flex-direction: column;
+}
+
+.flexbox1 {
+  background: rgb(13, 166, 129);
+  padding: 20px;
+  margin: 20px;
+  display: flex;
+  flex-direction: row-reverse;
+}
+
+.flexbox2 {
+  background: rgb(13, 166, 129);
+  padding: 20px;
+  margin: 20px;
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.flexbox3 {
+  background: rgb(13, 166, 129);
+  padding: 20px;
+  margin: 20px;
+  display: flex;
+  justify-content: center;
+}
+
+.flexbox4 {
+  background: rgb(13, 166, 129);
+  height: 600px;
+  padding: 20px;
+  margin: 20px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.flexbox5 {
+  background: rgb(13, 166, 129);
+  height: 600px;
+  padding: 20px;
+  margin: 20px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.flexbox6 {
+  background: rgb(13, 166, 129);
+  height: 600px;
+  padding: 20px;
+  margin: 20px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  align-content: center;
+  flex-wrap: wrap;
+}
+
+.item-title {
+  background: rgb(233, 149, 210);
+  width: 200px;
+  padding: 10px;
+  margin: 10px;
+}
+
+.item {
+  background: rgb(212, 102, 57);
+  width: 200px;
+  padding: 10px;
+  margin: 10px;
+}
+
+/*
+
+
+
+
+
+FLEX1
+
+
+
+
+
+*/
+
+html, body {
+  margin: 0;
+}
+
+.main-container {
+  background: tan;
+  width: 100%;
+  height: 100vh;
+  padding: 20px;
+}
+
+.top-row {
+  /*background: lightpink;*/
+  height: 20%;
+  display: flex;
+  justify-content: space-evenly;
+  gap: 10px;
+}
+
+.top-item {
+  background: rgb(148, 228, 185);
+  width: 100%;
+}
+
+.bottom-row {
+  /*background: lightblue;*/
+  height: 80%;
+  display: flex;
+}
+
+.bottom-left{
+  background: lavender;
+  width: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 10px 10px 0 0;
+}
+
+.bottom-left-item {
+  background: rgb(240, 200, 132);
+  width: 25%;
+  height: 25%;
+}
+
+.bottom-right{
+  width: 50%;
+  display: flex;
+  justify-content: space-evenly;
+  flex-direction: column;
+  gap: 10px;
+  margin: 10px 0 0 0;
+}
+
+.bottom-right-item {
+  background: lightpink;
+  width: 100%;
+  height: 100%;
+}

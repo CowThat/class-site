@@ -79,7 +79,6 @@ body {
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
-  margin-top: 140px;
 }
 
 .blue {
@@ -129,22 +128,22 @@ nav {
   background: #B9E2F0;
   box-shadow: 0 4px 12px -8px;
   width: 100%;
-  height: 100px;
-  position: fixed;
-  top:0;
+  height: 16%;
+  display: flex;
+  justify-content: space-around;
+  flex-wrap: nowrap;
   z-index:999;
+
 }
 
 nav h1 {
-  padding-left: 240px;
-  margin: 16px 0;
-  float: left;
+  margin: 16px 8px;
+  white-space: nowrap;
 }
 
 nav .nav-buttons {
-  padding-right: 240px;
-  float: right;
-  display: inline;
+  display: flex;
+  column-gap: 6px;
 }
 
 nav a {
@@ -184,25 +183,35 @@ nav a:hover {
 
  */
 
-.content {
-  border: dotted 12px white;
-  width: 800px;
-  padding: 20px;
-  margin: 200px auto 0 auto;
+.home-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
-.content p {
+.home-content {
+  border: dotted 12px white;
+  width: 44%;
+  min-width: 400px;
+  margin: 100px 0;
+  display: flex;
+}
+
+.home-content p {
   font-family: PinkChicken;
   font-size: 20px;
   text-align: justify;
   background: #B9E2F0;
   border: solid 1px #62BFED;
   padding: 60px 100px;
+  margin: 20px;
+  min-width: 300px;
 }
 
-.content img {
+.home-content img {
   border: solid 2px white;
-  margin: 0 0 12px 24px
+  margin: 0 0 12px 24px;
+  height: 108px;
 }
 
 /*
