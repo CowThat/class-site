@@ -229,7 +229,7 @@ CATALOGUE PAGE
  */
 
 .catalogue {
-  margin: 0 auto;
+  margin: 40px auto;
   max-width: 1200px;
 }
 
@@ -326,7 +326,7 @@ WISHLIST PAGE
 */
 
 .wishlist {
-  margin: 0 auto;
+  margin: 40px auto;
   text-align: center;
   width: 800px;
 }
