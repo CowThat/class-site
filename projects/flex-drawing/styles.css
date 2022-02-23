@@ -113,18 +113,47 @@ html, body {
   left: 5%;
 }
 
+#white-board-and-marker {
+  display: flex;
+  position: relative;
+  top: 20%;
+  left: 32%;
+  width: 50%;
+  height: 30%;
+}
+
+
 #white-board {
   font-family: PinkChicken;
   font-size: .75vw;
   background: white;
   border: solid 8px black;
   border-radius: 8px;
-  width: 44%;
-  height: 28%;
+  width: 100%;
+  height: 100%;
   padding: 4px;
-  position: relative;
-  top: 20%;
-  left: 32%;
+}
+
+#marker {
+  margin-left: 2px;
+  width: 6%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+#marker-cap {
+  background: black;
+  width: 100%;
+  height: 16%;
+}
+
+#marker-pen {
+  background: white;
+  width: 80%;
+  height: 30%;
 }
 
 #fridge-handle {
@@ -165,11 +194,71 @@ html, body {
   float: right;
 }
 
-.counter {
+#counter {
   background: hotpink;
   width: 60%;
   height: 100%;
   display: flex;
   justify-content: space-evenly;
   flex-direction: column;
+  align-items: center;
+}
+
+#above-counter {
+  background: brown;
+  width: 100%;
+  height: 42%;
+}
+
+#counter-top {
+  background: white;
+  min-width: 101%;
+  height: 4%;
+}
+
+#under-counter {
+  background: rgb(31, 19, 7);
+  width: 100%;
+  height: 54%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: .5%;
+
+}
+
+#dishwasher {
+  background: rgb(28, 28, 28);
+  width: 100%;
+  height: 90%;
+  margin: 0 20px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+#cabinet-frame-under1 {
+  background: rgb(47, 32, 20);
+  width: 75%;
+  height: 100%;
+  padding: 0 .5%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+#cabinet-frame-under2 {
+  background: rgb(47, 32, 20);
+  width: 40%;
+  height: 100%;
+  padding: 0 1%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.cabinet-doors-under {
+  background: rgb(80, 52, 29);
+  width: 90%;
+  height: 90%;
 }
