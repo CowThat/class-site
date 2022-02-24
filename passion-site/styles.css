@@ -131,9 +131,9 @@ nav {
   height: 16%;
   display: flex;
   justify-content: space-around;
+  align-items: center;
   flex-wrap: nowrap;
   z-index:999;
-
 }
 
 nav h1 {
@@ -154,9 +154,12 @@ nav a {
   border: solid 1px #62BFED;
   text-decoration: none;
   display: inline-block;
-  width: 100px;
-  padding: 32px 8px;
-  margin: 6px 0;
+  width: 100px;;
+  height: 90px;
+  min-width: 100px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
   transition: ease-in-out .2s;
 }
 

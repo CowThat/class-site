@@ -28,12 +28,12 @@ body {
 @keyframes pulse {
   0% {
     background: blue;
-    transform: scale(80%);
+    transform: scale(100%);
   }
 
   100% {
     background: navy;
-    transform: scale(120%);
+    transform: scale(140%);
   }
 }
 

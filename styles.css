@@ -20,10 +20,29 @@
   color: #33FF00;
 }
 
+body {
+  margin: 0;
+}
+
 h1 {
   font-family: radiospacebitmap;
 }
 
 p, ul {
   font-family: RetroComputer;
+}
+
+.container {
+  width: 100vw;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  position: relative;
+  bottom: 12vh;
+}
+
+p {
+
 }
