@@ -99,13 +99,6 @@ h2 {
   margin: 0;
 }
 
-h3 {
-  font-family: comiccomoc;
-  font-size: 24px;
-  color: #7E2EED;
-  margin: 0;
-}
-
 p {
   font-family: PinkChicken;
   font-size: 20px;
@@ -333,25 +326,23 @@ td {
 tr {
   border-right: hidden;
   border-left: hidden;
-  transition: ease-in-out .2s;
 }
 
-.highlight-table tr:hover {
-  background: #8ED1EF;
-  cursor: pointer;
-}
-
-table tr:first-of-type:hover {
-  background: #B9E2F0;
-  cursor: auto;
-}
-
-table tr:first-of-type {
+.header-row {
   border-top: hidden;
 }
 
-table tr:last-of-type {
+.bottom-row {
   border-bottom: hidden;
+}
+
+.highlight-row {
+  transition: ease-in-out .2s;
+}
+
+.highlight-row:hover {
+  background: #8ED1EF;
+  cursor: pointer;
 }
 
 /*
@@ -377,14 +368,6 @@ WISHLIST PAGE
 .wishlist p {
   margin: 0 auto 40px auto;
 }
-
-.wishlist ul {
-  font-family: PinkChicken;
-  color: #3423A6;
-  list-style: none;
-}
-
-
 
 /*
 

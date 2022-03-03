@@ -19,22 +19,19 @@
   background-color: black;
 }
 
-/*
-
-
-
-
-
-MAIN STUFF
-
-
-
-
-
-*/
-
 body {
   margin: 0;
+}
+
+.container {
+  width: 100vw;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  position: relative;
+  bottom: 12vh;
 }
 
 h1 {
@@ -43,73 +40,20 @@ h1 {
   font-size: 48px;
 }
 
+p, ul {
+  font-family: RetroComputer;
+}
+
 p {
   color: #33FF00;
-  font-family: RetroComputer;
+  text-align: center;
   font-size: 20px;
 }
 
 li {
-  color: #33FF00;
-  font-family: RetroComputer;
-  font-size: 16px;
-}
-
-a {
-  color: #33FF00;
-}
-
-details summary {
-  color: #33FF00;
-  font-family: RetroComputer;
-  font-size: 16px;
-}
-
-/*
-
-
-
-
-
-INDIVIDUAL CSS
-
-
-
-
-
-*/
-
-.container {
-  width: 100vw;
-  min-height: 60vh;
-  display: flex;
-  align-items: center;
-  flex-direction: column;
-  position: absolute;
-  top: 24vh;
-}
-
-h1, p {
-  text-align: center;
-}
-
-.list {
-  display: flex;
-  align-items: flex-start;
-  flex-direction: column;
-}
-
-ul {
-  padding: 0;
-  margin: 0;
-}
-
-li, summary {
-  list-style: none;
-}
-
-.main-list-item {
-  width: 200px;
+  text-decoration: none;
+  vertical-align: middle;
+  margin-bottom: 10px;
 }
 
 span .bullet-point {
@@ -117,42 +61,32 @@ span .bullet-point {
 }
 
 a {
+  color: #33FF00;
+  font-size: 16px;
   text-decoration: none;
 }
 
-a:hover .underline, summary:hover .underline {
+a .underline {
+  text-decoration: none;
+}
+
+li:hover .underline {
   text-decoration: underline;
 }
 
-summary:hover {
-  cursor: pointer;
+a:hover {
+  animation: blink 1s ease-in-out alternate infinite;
 }
 
-a:hover, summary:hover {
-  animation: blink 1s ease-in-out infinite;
-}
 
 @keyframes blink {
   0% {
     color: #33FF00;
   }
   50% {
-    color: black;
-  }
-  100% {
     color: #33FF00;
   }
-}
-
-.main-list-item, summary {
-  margin-bottom: 12px;
-}
-
-.sub-list {
-  margin-left: 16px;
-}
-
-.sub-list-item {
-  font-size: 14px;
-  /* margin-bottom: 4px; */
+  100% {
+    color: black;
+  }
 }
