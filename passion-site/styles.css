@@ -344,13 +344,14 @@ WISHLIST PAGE
 }
 
 .wishlist p {
-  margin: 0 auto 40px auto;
+  margin-bottom: 20px;
 }
 
 .wishlist ul {
   font-family: PinkChicken;
   color: #3423A6;
   list-style: none;
+  margin-bottom: 40px;
 }
 
 
