@@ -13,17 +13,17 @@ FONTS
 
 @font-face {
   font-family: comiccomoc;
-  src: url(fonts/comiccomoc.ttf)
+  src: url(../fonts/comiccomoc.ttf)
 }
 
 @font-face {
   font-family: PinkChicken;
-  src: url(fonts/PinkChicken-Regular.ttf)
+  src: url(../fonts/PinkChicken-Regular.ttf)
 }
 
 @font-face {
   font-family: HappyChicken;
-  src: url(fonts/happy_chicken/HappyChicken.ttf);
+  src: url(../fonts/happy_chicken/HappyChicken.ttf);
 }
 
 /*
@@ -289,7 +289,6 @@ th, td {
 th {
   font-family: HappyChicken;
   color: #3423A6;
-  border-top: hidden;
 }
 
 td {
@@ -316,13 +315,12 @@ table tr:first-of-type:hover {
   cursor: auto;
 }
 
-table tr:last-of-type {
-  border-bottom: hidden;
+table tr:first-of-type {
+  border-top: hidden;
 }
 
-.table-header:last-of-type {
-  border-bottom: solid 1px #62BFED;
-
+table tr:last-of-type {
+  border-bottom: hidden;
 }
 
 /*

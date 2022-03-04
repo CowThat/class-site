@@ -1,0 +1,43 @@
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+
+<link rel="stylesheet" type="text/css" href="styles.css">
+
+<body class="blue">
+<table class="table table-striped">
+    <tr>
+        <th></th>
+        <th>Animal</th>
+        <th>Name</th>
+        <th>Size</th>
+        <th>ISO Ranking</th>
+    </tr>
+
+    <tbody id="myTable">
+
+    </tbody>
+</table>
+
+<script>
+	var tableData = [
+	    {img:'../photos/wishlist/aziza.png', animal:'Stringray', name:'Aziza', size:'16"', iso:'♥♥♥'}
+	]
+
+	buildTable(tableData)
+
+	function buildTable(data){
+		var table = document.getElementById('myTable')
+
+		for (var i = 0; i < data.length; i++){
+			var row = `<tr>
+    							<td><img src=\"${data[i].img}\"></img></td>
+    							<td>${data[i].animal}</td>
+    							<td>${data[i].name}</td>
+                  <td>${data[i].size}</td>
+                  <td>${data[i].iso}</td>
+    					  </tr>`
+			table.innerHTML += row
+		}
+	}
+
+</script>
+</body>
