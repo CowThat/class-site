@@ -1,0 +1,110 @@
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+}
+
+#container {
+  /* background: rgba(3,0,59); */
+  background: rgba(130,234,255);
+  width: 100vw;
+  height: 100vh;
+  max-height: 100vh;
+  z-index: -1;
+  overflow: hidden;
+}
+
+.sky-container {
+  display: flex;
+  flex-direction: column;
+  z-index: 0;
+}
+
+.sun {
+  background: radial-gradient(circle, rgba(242, 251, 146, 1) 25%, rgba(227,245,21,1) 50%);
+  width: 8vw;
+  height: 8vw;
+  border-radius: 50%;
+  position: absolute;
+  top: 40px;
+  left: 120px;
+  filter: blur(10px);
+  animation: sun 30s linear infinite;
+}
+
+.moon {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+}
+
+.sky {
+  background: linear-gradient(0deg, rgba(130,234,255,0) 20%, rgba(21,136,245,1) 25%, rgba(3,0,59,1) 35%,rgba(3,0,59,1) 65%, rgba(21,136,245,1) 75%, rgba(130,234,255,0) 80%);
+  width: 100vw;
+  height: 200vh;
+  animation: sky 60s linear infinite;
+}
+
+@keyframes sky {
+	0% {
+    transform: translateY(100vh);
+  }
+	100% {
+    transform: translateY(-100vw)
+  }
+}
+
+.back-layer-container {
+  width: 100vw;
+  height: 100vh;
+  z-index: 1;
+  position: absolute;
+  bottom: 0;
+  left: -2vw;
+}
+
+.back-layer-effects {
+  width: 104vw;
+  height: 100vh;
+  display: flex;
+  align-items: flex-end;
+  justify-content: center;
+  /* opacity: .85; */
+  filter: blur(10px);
+  /* box-shadow: 0px -4px 0px 0px white; */
+}
+
+.building {
+}
+
+.building1 {
+  background: rgb(27, 28, 42);
+  width: 10vw;
+  height: 40vw;
+}
+
+.building2 {
+  background: rgb(27, 28, 42);
+  width: 8vw;
+  height: 48vw;
+}
+
+.building3 {
+  background: rgb(27, 28, 42);
+  width: 16vw;
+  height: 32vw;
+}
+
+.building4 {
+  background: rgb(27, 28, 42);
+  width: 12vw;
+  height: 46vw;
+}
+
+.building5 {
+  background: rgb(27, 28, 42);
+  width: 20vw;
+  height: 44vw;
+}

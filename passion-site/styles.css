@@ -1,0 +1,463 @@
+/*
+
+
+
+
+
+FONTS
+
+
+
+
+*/
+
+@font-face {
+  font-family: comiccomoc;
+  src: url(fonts/comiccomoc.ttf)
+}
+
+@font-face {
+  font-family: PinkChicken;
+  src: url(fonts/PinkChicken-Regular.ttf)
+}
+
+@font-face {
+  font-family: HappyChicken;
+  src: url(fonts/happy_chicken/HappyChicken.ttf);
+}
+
+/*
+
+light B1ue: #B9E2F0
+Baby B1ue: #8ED1EF
+Maya B1ue: #62BFED
+B1ue Pantone: #3423A6
+
+Muave: #D5AFF1
+Amethyst: #AB69DB
+B1ue Vi0let: #7E2EED
+Dark Purp1e: #380A77
+
+P1nk: #F6BCC7
+
+*/
+
+/*
+
+
+
+
+
+ALL PAGES
+
+
+
+
+
+*/
+
+* {
+  box-sizing: border-box;
+}
+
+/*fixes nav bar being moved by scroll bar*/
+@media screen and (min-width: 960px) {
+  html {
+    margin-left: calc(100vw - 100%);
+    margin-right: 0;
+  }
+}
+
+html, body {
+  padding: 0;
+  margin: 0;
+  min-height: 100%;
+}
+
+body {
+  background-image: url(photos/pile.jpeg);
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.blue {
+  background: #B9E2F0;
+}
+
+h1 {
+  font-family: comiccomoc;
+  font-size: 60px;
+  color: #7E2EED;
+  margin: 0;
+}
+
+h2 {
+  font-family: comiccomoc;
+  font-size: 40px;
+  color: #7E2EED;
+  margin: 0;
+}
+
+h3 {
+  font-family: comiccomoc;
+  font-size: 24px;
+  color: #7E2EED;
+  margin: 0;
+}
+
+p {
+  font-family: PinkChicken;
+  font-size: 20px;
+  color: #3423A6;
+  margin: 0;
+}
+
+ul, li {
+  margin: 0;
+}
+
+/*
+
+
+
+
+
+NAV BAR
+
+
+
+
+
+*/
+
+nav {
+  background: #B9E2F0;
+  box-shadow: 0 4px 12px -8px;
+  width: 100%;
+  height: 16%;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  flex-wrap: nowrap;
+  z-index:999;
+}
+
+nav h1 {
+  margin: 16px 8px;
+  white-space: nowrap;
+}
+
+nav .nav-buttons {
+  display: flex;
+  column-gap: 6px;
+}
+
+nav a {
+  font-family: PinkChicken;
+  font-size: 20px;
+  color: #3423A6;
+  text-align: center;
+  border: solid 1px #62BFED;
+  text-decoration: none;
+  display: inline-block;
+  width: 100px;;
+  height: 90px;
+  min-width: 100px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  transition: ease-in-out .2s;
+}
+
+nav a:hover {
+  color: #B9E2F0;
+  background: #62BFED;
+}
+
+.active {
+  text-decoration: underline;
+}
+
+/*
+
+
+
+
+
+ HOME PAGE
+
+
+
+
+
+ */
+
+.home-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.home-content {
+  border: dotted 12px white;
+  width: 44%;
+  min-width: 400px;
+  margin: 100px 0;
+  display: flex;
+}
+
+.home-content p {
+  font-family: PinkChicken;
+  font-size: 20px;
+  text-align: justify;
+  background: #B9E2F0;
+  border: solid 1px #62BFED;
+  padding: 60px 100px;
+  margin: 20px;
+  min-width: 300px;
+}
+
+.home-content img {
+  border: solid 2px white;
+  margin: 0 0 12px 24px;
+  height: 108px;
+}
+
+/*
+
+
+
+
+
+CATALOGUE PAGE
+
+
+
+
+
+ */
+
+.catalogue {
+  margin: 40px auto;
+  max-width: 1200px;
+}
+
+.catalogue-description {
+  margin: 0 auto 40px auto;
+  text-align: center;
+}
+
+.biography-column {
+  width: 400px;
+}
+
+/*
+
+
+
+
+
+TABLES
+
+
+
+
+
+*/
+
+
+
+table {
+  margin: 0 auto;
+  border-collapse: collapse;
+}
+
+table img {
+  width: 100px;
+  height: 100px;
+  object-fit: contain;
+}
+
+th, td {
+  border: solid 1px #62BFED;
+  padding: 16px;
+  width: 160px;
+  min-width: 40px;
+}
+
+th {
+  font-family: HappyChicken;
+  color: #3423A6;
+}
+
+td {
+  font-family: PinkChicken;
+  font-size: 20px;
+  color: #3423A6;
+  text-align: center;
+}
+
+/*hides the borders of the table*/
+tr {
+  border-right: hidden;
+  border-left: hidden;
+  transition: ease-in-out .2s;
+}
+
+.highlight-table tr:hover {
+  background: #8ED1EF;
+  cursor: pointer;
+}
+
+table tr:first-of-type:hover {
+  background: #B9E2F0;
+  cursor: auto;
+}
+
+table tr:first-of-type {
+  border-top: hidden;
+}
+
+table tr:last-of-type {
+  border-bottom: hidden;
+}
+
+/*
+
+
+
+
+
+WISHLIST PAGE
+
+
+
+
+
+*/
+
+.wishlist {
+  margin: 40px auto;
+  text-align: center;
+  width: 800px;
+}
+
+.wishlist p {
+  margin: 0 auto 40px auto;
+}
+
+.wishlist ul {
+  font-family: PinkChicken;
+  color: #3423A6;
+  list-style: none;
+}
+
+
+
+/*
+
+
+
+
+
+BIOGRAPHY PAGE
+
+
+
+
+
+*/
+
+.biography {
+  width: 800px;
+  margin: 0 auto;
+  display: block;
+  width: 50%;
+}
+
+.biography img {
+  float: left;
+  height: 400px;
+  width: 400px;
+  margin: 0 60px 20px 0;
+  object-fit: contain;
+}
+
+.back-to-catalogue {
+  display: block;
+  margin: 40px 0;
+}
+
+.biography a {
+  text-decoration: none;
+  transition: ease-in-out .2s;
+  color: #3423A6;
+}
+
+.biography a:hover {
+  text-decoration: underline;
+  color: #3423A6;
+}
+
+.biography a:visited {
+  color: #3423A6;
+}
+
+.biography-content table {
+  margin: 0;
+}
+
+.biography-content th {
+  font-family: HappyChicken;
+  align-text: right;
+  width: 240px;
+}
+
+.biography-content td {
+  align-text: left;
+  width: 400px;
+}
+
+.about {
+  margin-top: 40px;
+  line-height: 24px;
+}
+
+.about span {
+  font-family: HappyChicken;
+}
+
+.about a {
+  color: #7E2EED;
+  text-decoration: underline;
+}
+
+.about a:visited {
+  color: #7E2EED;
+}
+
+.about a:hover {
+  color: #3423A6;
+  text-decoration: underline;
+}
+
+/*
+
+.biography-content ul {
+  list-style: inside;
+}
+
+.biography-content li {
+  font-family: PinkChicken;
+  font-size: 24px;
+  color: #3423A6;
+  margin: 0;
+}
+
+.biography-content li span {
+  font-family: HappyChicken;
+  font-size: 20px;
+}
+
+*/
