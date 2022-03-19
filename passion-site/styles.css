@@ -282,14 +282,15 @@ table img {
 th, td {
   border: solid 1px #62BFED;
   padding: 16px;
-  width: 160px;
+  width: 200px;
   min-width: 40px;
 }
 
-th {
+th, .not-sortable {
   font-family: HappyChicken;
   color: #3423A6;
   border-top: hidden;
+  font-size: 16px;
 }
 
 td {
@@ -311,18 +312,13 @@ tr {
   cursor: pointer;
 }
 
-table tr:first-of-type:hover {
-  background: #B9E2F0;
-  cursor: auto;
-}
-
-table tr:last-of-type {
+tbody:last-of-type {
   border-bottom: hidden;
 }
 
-.table-header:last-of-type {
-  border-bottom: solid 1px #62BFED;
-
+#catalogue-table-header:hover {
+  background: #B9E2F0;
+  cursor: auto;
 }
 
 /*
