@@ -55,7 +55,7 @@ var catalogueTable = [
 
     {img:'hot', name:'Hot', squishName: 'Quinn', animal:'Kangaroo', sizeOwned:'5"', sizeRank: '05', birthday:'Feb. 13, 2022'},
 
-    {img:'jamba-juice', name:'Jamba Juice', squishName: 'Stanley', animal:'Jellyfish/Panda', sizeOwned:'7.5"', sizeRank: '07.5', birthday:'March 6, 2022'},
+    {img:'jamba-juice', name:'Jamba Juice', squishName: 'Stanley', animal:'Jellyfish / Panda', sizeOwned:'7.5"', sizeRank: '07.5', birthday:'March 6, 2022'},
 
     {img:'jello', name:'Jello', squishName: 'Veronica', animal:'Octopus', sizeOwned:'8"', sizeRank: '08', birthday:'Feb. 13, 2022'},
 
@@ -101,7 +101,7 @@ var catalogueTable = [
 
     {img:'soil', name:'Soil', squishName: 'Stacy', animal:'Squid', sizeOwned:'8"', sizeRank: '08', birthday:'Jan. 18, 2022'},
 
-    {img:'soot', name:'Soot', squishName: 'Karina', animal:'Squid/Cat', sizeOwned:'7.5"', sizeRank: '07.5', birthday:''},
+    {img:'soot', name:'Soot', squishName: 'Karina', animal:'Squid / Cat', sizeOwned:'7.5"', sizeRank: '07.5', birthday:''},
 
     {img:'squash', name:'Squash', squishName: 'Zobey', animal:'Octopus', sizeOwned:'2" (squishville)', sizeRank: '02', birthday:'Feb. 4, 2022'},
 
@@ -115,7 +115,7 @@ var catalogueTable = [
 
     {img:'tangerine', name:'Tangerine', squishName: 'Halton', animal:'Stingray', sizeOwned:'11"', sizeRank: '11', birthday:'March 18, 2022'},
 
-    {img:'three-gum', name:'Three Gum', squishName: 'Lexi', animal:'Stingray/Leopard', sizeOwned:'7.5"', sizeRank: '07.5', birthday:'March 6, 2022'},
+    {img:'three-gum', name:'Three Gum', squishName: 'Lexi', animal:'Stingray / Leopard', sizeOwned:'7.5"', sizeRank: '07.5', birthday:'March 6, 2022'},
 
     {img:'tricycle', name:'Tricycle', squishName: 'Tristan', animal:'Triceratops', sizeOwned:'8"', sizeRank: '08', birthday:'Jan. 18, 2022'},
 
