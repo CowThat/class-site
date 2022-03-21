@@ -5,6 +5,8 @@
   <title>Kyree's Squishies - wishlist</title>
   <link rel="stylesheet" type="text/css" href="styles.css">
   <link rel="icon" type="image/png" href="../photos/smileicon.png">
+
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
 </head>
 
 <body class="blue">
@@ -31,11 +33,11 @@
     <table>
       <tr class="table-header">
         <th></th>
-        <th>name</th>
-        <th>animal</th>
-        <th>size</th>
-        <th>color(s)</th>
-        <th>ISO ranking</th>
+        <th data-column="name" data-order="desc">name  &#9654;</th>
+        <th data-column="animal" data-order="desc">animal  &#9654;</th>
+        <th data-column="sizeRank" data-order="desc">size  &#9654;</th>
+        <th data-column="color" data-order="desc">color(s)  &#9654;</th>
+        <th data-column="iso" data-order="desc">ISO ranking  &#9654;</th>
       </tr>
 
       <tbody id="wishlistTable">
