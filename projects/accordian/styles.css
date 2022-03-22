@@ -387,7 +387,7 @@ body {
   }
 }
 
-@media screen and (max-width: 600px) {
+@media screen and (max-width: 600px){
   body {
     background: black;
   }
@@ -402,6 +402,14 @@ body {
 
   #phrase6 {
     display: contents;
+  }
+
+  .shapes {
+    display: none;
+  }
+
+  .shape {
+    border: solid 1px white;
   }
 
   .shapes:nth-child(1) {
@@ -428,10 +436,6 @@ body {
   .shapes:nth-child(6) {
     animation: scale2 1s infinite alternate ease, square4 2s infinite linear;
     animation-delay: 1.33s;
-  }
-
-  .shape {
-    border: solid 1px white;
   }
 
   @keyframes phrase3 {
@@ -473,7 +477,6 @@ body {
       transform: rotate(120deg) scale(2.5);
     }
   }
-}
 
   @keyframes blackout {
     0% {

@@ -1,0 +1,73 @@
+* {
+  box-sizing: border-box;
+}
+
+body {
+  background: lightblue;
+}
+
+p {
+  font-family: monospace;
+  font-size: 16px;
+}
+
+img {
+  max-height: 20vw;
+  max-width: 20vw;
+}
+
+p .hover {
+  color: rgb(17, 50, 107);
+  font-weight: bold;
+  transition: .3s ease-in-out;
+}
+
+p .hover:hover {
+  color: rgb(92, 204, 137);
+  font-style: italic;
+  text-decoration: underline;
+  cursor: cell;
+}
+
+.hidden {
+  position: absolute;
+  bottom: 1vw;
+  left: 1vw;
+  opacity: 0;
+  transition: .5s ease;
+  transition-delay: .1s;
+}
+
+.hover + .hidden {
+}
+
+.hover:hover + .hidden {
+  opacity: 1;
+}
+
+.object {
+  background: rgb(17, 50, 107);
+  width: 150px;
+  height: 150px;
+  border-radius: 50%;
+  position: absolute;
+  top: 30vh;
+  left: 50vw;
+  /*transform: translate(-50%, -50%); offsets the object to be in the center rather than positioning from the top left corner*/
+  transition:
+    background .5s ease-in-out,
+    transform 1s,
+    border-radius .5s;
+  transition-delay: .1s;
+}
+
+.object:hover {
+  background: rgb(92, 204, 137);
+  transform: scale(2);
+  border-radius: 0%;
+  cursor: help;
+}
+
+.interesting li:first-of-type {
+  color: red;
+}
