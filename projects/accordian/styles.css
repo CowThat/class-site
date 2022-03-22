@@ -3,5 +3,536 @@
 }
 
 body {
+  background: rgb(227, 227, 227);
   margin: 0;
+}
+
+.container {
+  width: 100vw;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+
+}
+
+.words {
+  width: 70vw;
+  height: 10vh;
+  display: flex;
+  justify-content: center;
+  text-align: center;
+  align-items: center;
+  position: relative;
+  bottom: 20vh;
+}
+
+#phrase1 {
+}
+
+#phrase2, #phrase3, #phrase4, #phrase5, #phrase6 {
+  display: none;
+}
+
+
+.shape-box {
+  position: relative;
+  top: 4vh;
+}
+
+.shapes {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.shape {
+  border: solid 1px rgb(161, 161, 161);
+  border-radius: 50%;
+  width: 10vw;
+  height: 10vw;
+  position: absolute;
+}
+
+.circle1 {
+  width: 10vw;
+  height: 10vw;
+  animation: grow 1s infinite alternate ease;
+}
+
+.circle2 {
+  width: 12vw;
+  height: 12vw;
+  animation: grow 1s infinite alternate ease;
+  animation-delay: .25s;
+}
+
+.circle3 {
+  width: 14vw;
+  height: 14vw;
+  animation: grow 1s infinite alternate ease;
+  animation-delay: .5s;
+}
+
+.circle4 {
+  width: 16vw;
+  height: 16vw;
+  animation: grow 1s infinite alternate ease;
+  animation-delay: .75s;
+}
+
+.circle5 {
+  width: 18vw;
+  height: 18vw;
+  animation: grow 1s infinite alternate ease;
+  animation-delay: 1s;
+}
+
+.circle6 {
+  width: 20vw;
+  height: 20vw;
+  animation: grow 1s infinite alternate ease;
+  animation-delay: 1.25s;
+}
+
+@keyframes grow {
+  100% {
+    transform: scale(1.2);
+  }
+}
+
+@media screen and (max-width: 1100px) {
+  body {
+    background: rgb(161, 161, 161);
+  }
+
+  #phrase1 {
+    display: none;
+  }
+
+  #phrase2 {
+    display: contents;
+  }
+
+  .shape {
+    border: solid 1px rgb(117, 117, 117);
+  }
+
+  .circle1 {
+    animation: phrase2 1s infinite alternate ease;
+  }
+
+  .circle2 {
+    animation: phrase2 1s infinite alternate ease;
+    animation-delay: .5s;
+  }
+
+  .circle3 {
+    animation: phrase2 1s infinite alternate ease;
+    animation-delay: 1s;
+  }
+
+  .circle4 {
+    animation: phrase2 1s infinite alternate ease;
+    animation-delay: 1.5s;
+  }
+
+  .circle5 {
+    animation: phrase2 1s infinite alternate ease;
+    animation-delay: 2s;
+  }
+
+  .circle6 {
+    animation: phrase2 1s infinite alternate ease;
+    animation-delay: 2.5s;
+  }
+
+  @keyframes phrase2 {
+    100% {
+      transform: scale(1.2);
+    }
+  }
+}
+
+@media screen and (max-width: 1000px) {
+  body {
+    background: rgb(117, 117, 117);
+  }
+
+  #phrase2 {
+    display: none;
+  }
+
+  #phrase3 {
+    display: contents;
+  }
+
+  .shape {
+    border: solid 1px rgb(73, 71, 71);
+  }
+
+  .circle1 {
+    animation: phrase3 3s infinite alternate ease;
+  }
+
+  .circle2 {
+    animation: phrase3 3s infinite alternate ease;
+    animation-delay: .5s;
+  }
+
+  .circle3 {
+    animation: phrase3 3s infinite alternate ease;
+    animation-delay: 1s;
+  }
+
+  .circle4 {
+    animation: phrase3 3s infinite alternate ease;
+    animation-delay: 1.5s;
+  }
+
+  .circle5 {
+    animation: phrase3 3s infinite alternate ease;
+    animation-delay: 2s;
+  }
+
+  .circle6 {
+    animation: phrase3 3s infinite alternate ease;
+    animation-delay: 2.5s;
+  }
+
+  @keyframes phrase3 {
+    100% {
+      transform: scale(1.5);
+    }
+  }
+}
+
+@media screen and (max-width: 900px) {
+  body {
+    background: rgb(73, 71, 71);
+  }
+
+  #phrase3 {
+    display: none;
+  }
+
+  #phrase4 {
+    display: contents;
+  }
+
+  .shape {
+    border: solid 1px rgb(43, 43, 43);
+  }
+
+  .circle1 {
+    animation: phrase3 .5s infinite alternate ease;
+    animation: square4 .7s infinite linear ease;
+  }
+
+  .circle2 {
+    animation: phrase3 .5s infinite alternate ease;
+    animation-delay: .6s;
+    animation: square4 2s infinite linear ease;
+  }
+
+  .circle3 {
+    animation: phrase3 .5s infinite alternate ease;
+    animation-delay: 1s;
+    animation: square4 1.75s infinite linear ease;
+  }
+
+  .circle4 {
+    animation: phrase3 .5s infinite alternate ease;
+    animation-delay: 1.5s;
+    animation: square4 .5s infinite linear ease;
+  }
+
+  .circle5 {
+    animation: phrase3 .5s infinite alternate ease;
+    animation-delay: 1s;
+    animation: square4 .75s infinite linear ease;
+  }
+
+  .circle6 {
+    animation: phrase3 .5s infinite alternate ease;
+    animation-delay: 2.5s;
+    animation: square4 2s infinite linear;
+    animation: delay:
+  }
+
+  @keyframes phrase3 {
+    100% {
+
+      transform: scale(1.5);
+    }
+  }
+  @keyframes square4 {
+    0% {
+    }
+    25% {
+      border-radius: 50%
+    }
+    26% {
+      border-radius: 0%
+    }
+    49% {
+      border-radius: 0%
+    }
+    50% {
+      border-radius: 50%
+
+    }
+    55% {
+      border-radius: 50%
+    }
+    56% {
+      border-radius: 0%
+    }
+    82% {
+      border-radius: 0%
+    }
+    83% {
+      border-radius: 50%
+
+    }
+    100% {
+      transform: rotate(120deg)
+    }
+  }
+}
+
+@media screen and (max-width: 800px) {
+  body {
+    background: rgb(73, 71, 71);
+  }
+
+  #phrase4 {
+    display: none;
+  }
+
+  #phrase5 {
+    display: contents;
+    color: red;
+  }
+
+  .shape {
+    border: solid 1px rgb(43, 43, 43);
+  }
+
+  .circle1 {
+    animation: scale .5s infinite alternate ease, square1 .7s infinite linear ease;
+  }
+
+  .circle2 {
+    animation: scale .5s .6s infinite alternate ease, square1 2s 4s infinite linear ease;
+  }
+
+  .circle3 {
+    animation: scale .75s 1s infinite alternate ease, square1 1.75s infinite linear ease;
+  }
+
+  .circle4 {
+    animation: scale .5s 1.5s infinite alternate ease, square1 .5s infinite linear ease;
+  }
+
+  .circle5 {
+    animation: scale .5s 1s infinite alternate ease, square1 1s infinite linear ease;
+  }
+
+  .circle6 {
+    animation: scale 4s 2.5s infinite alternate ease, square1 2s 1s infinite linear;
+  }
+
+  @keyframes scale {
+    100% {
+      transform: scale(3);
+    }
+  }
+
+  @keyframes square1 {
+    0% {
+      border-radius: 50%
+    }
+    25% {
+      border-radius: 50%
+    }
+    26% {
+      border-radius: 0%
+    }
+    49% {
+      border-radius: 0%
+    }
+    50% {
+      border-radius: 50%
+
+    }
+    55% {
+      border-radius: 50%
+    }
+    56% {
+      border-radius: 0%
+    }
+    82% {
+      border-radius: 0%
+    }
+    83% {
+      border-radius: 50%
+
+    }
+    100% {
+      transform: rotate(120deg);
+      border-radius: 50%
+    }
+  }
+}
+
+@media screen and (max-width: 600px) {
+  body {
+    background: black;
+  }
+
+  .words {
+    animation: blackout 6s linear;
+  }
+
+  #phrase5 {
+    display: none;
+  }
+
+  #phrase6 {
+    display: contents;
+  }
+
+  .shapes:nth-child(1) {
+    animation: phrase3 .5s infinite alternate ease, square4 3s infinite linear ease;
+  }
+
+  .shapes:nth-child(2) {
+    animation: phrase3 .5s infinite alternate ease, square4 2s infinite linear ease;
+  }
+
+  .shapes:nth-child(3) {
+    animation: scale2 .75s infinite alternate ease, square4 1.75s infinite linear ease;
+  }
+
+  .shapes:nth-child(4) {
+    animation: phrase3 .5s infinite alternate ease, square4 .5s infinite linear ease;
+    animation-delay: .63s;
+  }
+
+  .shapes:nth-child(5) {
+    animation: scale2 .5s infinite alternate ease, square4 1s infinite linear ease;
+  }
+
+  .shapes:nth-child(6) {
+    animation: scale2 1s infinite alternate ease, square4 2s infinite linear;
+    animation-delay: 1.33s;
+  }
+
+  .shape {
+    border: solid 1px white;
+  }
+
+  @keyframes phrase3 {
+    100% {
+      transform: scale(1.5);
+    }
+  }
+
+  @keyframes square4 {
+    0% {
+    }
+    25% {
+      border-radius: 50%
+    }
+    26% {
+      border-radius: 0%
+    }
+    49% {
+      border-radius: 0%
+    }
+    50% {
+      border-radius: 50%
+
+    }
+    55% {
+      border-radius: 50%
+    }
+    56% {
+      border-radius: 0%
+    }
+    82% {
+      border-radius: 0%
+    }
+    83% {
+      border-radius: 50%
+
+    }
+    100% {
+      transform: rotate(120deg) scale(2.5);
+    }
+  }
+}
+
+  @keyframes blackout {
+    0% {
+      color: white;
+      opacity: 1;
+    }
+    50% {
+      color: white;
+      opacity: 1;
+    }
+    51% {
+      color: white;
+      opacity: .25;
+    }
+    52% {
+      color: white;
+      opacity: .25;
+    }
+    60% {
+      color: white;
+      opacity: 1;
+    }
+    65% {
+      color: white;
+      opacity: 1;
+    }
+    66% {
+      color: white;
+      opacity: .25;
+    }
+    68% {
+      color: white;
+      opacity: .25;
+    }
+    70% {
+      color: white;
+      opacity: 0;
+    }
+    72% {
+      color: white;
+      opacity: 1;
+    }
+    80% {
+      color: white;
+      opacity: 1;
+    }
+    84% {
+      opacity: 0;
+    }
+  }
+
+  @keyframes expand {
+    0%{
+
+    }
+    100% {
+      .shape-box {
+        position: bottom: 8vw;
+      }
+    }
+  }
 }
