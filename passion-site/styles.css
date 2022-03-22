@@ -239,11 +239,13 @@ CATALOGUE PAGE
  */
 
 .catalogue {
+  background: red;
   margin: 40px auto;
-  max-width: 1200px;
+  max-width: 90vw;
 }
 
 .catalogue-description {
+  padding: 0 20px;
   margin: 0 auto 40px auto;
   text-align: center;
 }
@@ -270,14 +272,16 @@ table {
 }
 
 table img {
-  width: 100px;
-  height: 100px;
+  width: 8vw;
+  height: 8vw;
+  max-width: 100px;
+  max-height: 100px;
   object-fit: contain;
 }
 
 th, td {
   border: solid 1px #62BFED;
-  padding: 12px;
+  padding: clamp(4px, 1vw, 16px);
   width: 10vw;
   min-width: 40px;
 }
@@ -457,29 +461,14 @@ BIOGRAPHY PAGE
 
 */
 
-@media screen and (max-width: 600px){
-  .catalogue {
-    margin: 40px auto;
-    max-width: 550px;
-  }
+@media screen and (max-width: 900px){
 
   .catalogue-description {
     margin: 0 auto 40px auto;
-    padding: 0 20px;
     text-align: center;
   }
 
-  p {
-    font-size: 8px;
-  }
-
-  table img {
-    width: 50px;
-    height: 50px;
-  }
-
   th, td {
-    padding: 4px;
     width: 10vw;
     min-width: 20px;
   }
@@ -493,7 +482,43 @@ BIOGRAPHY PAGE
 
   td {
     font-family: PinkChicken;
-    font-size: 20px;
+    font-size: 18px;
+    color: #3423A6;
+    text-align: center;
+  }
+
+  #catalogue-table-header:hover {
+    background: #B9E2F0;
+    cursor: auto;
+  }
+}
+
+@media screen and (max-width: 600px){
+
+  .catalogue-description {
+    margin: 0 auto 40px auto;
+    text-align: center;
+  }
+
+  p {
+    font-size: 16px;
+  }
+
+  th, td {
+    width: 20vw;
+    min-width: 20px;
+  }
+
+  th, .not-sortable {
+    font-family: HappyChicken;
+    color: #3423A6;
+    border-top: hidden;
+    font-size: 12px;
+  }
+
+  td {
+    font-family: PinkChicken;
+    font-size: 16px;
     color: #3423A6;
     text-align: center;
   }
