@@ -13,9 +13,21 @@ html, body {
 
 .kitchen-wall {
   background: tan;
-  width: 100%;
+  width: 100vw;
   height: 100vh;
-  padding: 4% 20%;
+  padding: 2% 10%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+
+.sizing {
+width: 80vw;
+height: 70vw;
+min-width: 400px;
+min-height: 350px;
+max-width: 1100px;
 }
 
 #cabinet-sections{

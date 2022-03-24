@@ -221,6 +221,10 @@ body {
     background: rgb(78, 0, 0);
   }
 
+  .container {
+    overflow: hidden;
+  }
+
   #phrase3 {
     display: none;
   }
@@ -326,6 +330,10 @@ body {
 @media screen and (max-width: 800px) {
   body {
     background: rgb(32, 4, 4);
+  }
+
+  .container {
+    overflow: hidden;
   }
 
   #phrase4 {
@@ -440,6 +448,10 @@ body {
 @media screen and (max-width: 600px){
   body {
     background: black;
+  }
+
+  .container {
+    overflow: hidden;
   }
 
   .words {

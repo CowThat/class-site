@@ -9,17 +9,27 @@
 
 <body>
 
-  <div class='marquee'>Lorem ipsum dolor sit amet, consectetur adipiscing elit END.</div>
+  <div class="marquee draggable">Lorem ipsum dolor sit amet, consectetur adipiscing elit END.</div>
 
-  <button onclick="toggle()">i am a button :)</button>
+  <button onclick="toggle()" class="draggable">i am a button :)</button>
 
-  <div id="box" class="box">
+  <div id="box" class="box draggable">
     the box
   </div>
 
+  <div class="draggable">poop. drag me around.</div>
+
+
   <script src="jquery-3.6.0.min.js"></script>
   <script src="jquery.marquee.min.js"></script>
+  <script src="https://code.jquery.com/ui/1.13.1/jquery-ui.min.js" integrity="sha256-eTyxS0rkjpLEo16uXTS0uVCS4815lc40K2iVpWDvdSY=" crossorigin="anonymous"></script>
   <script src="javascript.js"></script>
 
 </body>
 </html>
+ <!--
+ https://p5js.org/
+http://paperjs.org/
+https://releases.jquery.com/ui/
+https://jqueryui.com/
+-->
