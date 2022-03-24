@@ -5,13 +5,31 @@
 body {
 }
 
-#box {
+button {
+  background: green;
+  border-radius: 50%;
+  cursor: cell;
+  padding: 25px;
+}
+
+.box {
+  background: brown;
+  position: fixed;
+  top: -500px;
+  left: 0;
 }
 
 .active {
   width: 100%;
   padding: 25px;
+  top: 100px;
   background-color: coral;
   color: white;
   font-size: 25px;
+}
+
+.marquee {
+  width: 300px;
+  overflow: hidden;
+  border:1px solid #ccc;
 }
