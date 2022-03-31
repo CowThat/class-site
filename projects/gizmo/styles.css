@@ -3,5 +3,33 @@
 }
 
 body {
-  margin: 0;
+  color: white;
+  font-family: monospace;
+  background: black;
+  margin: 65px 0 0 0 ;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-flow: column-reverse;
+  overflow: hidden;
+}
+
+.border {
+  border: solid 2px white;
+  width: 820px;
+  height: 820px;
+  position: fixed;
+  top: 55px;
+}
+
+.space {
+  height: 20px;
+  width: 100px;
+}
+
+.block {
+  background: red;
+  border: solid 1px brown;
+  height: 40px;
+  width: 80px;
 }
