@@ -32,4 +32,12 @@ body {
   border: solid 1px brown;
   height: 40px;
   width: 80px;
+  margin: 10px;
+}
+
+.p {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-flow: column;
 }
