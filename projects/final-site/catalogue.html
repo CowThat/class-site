@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <title>Catalogue</title>
+  <link rel="stylesheet" type="text/css" href="styles.css">
+  <link rel="icon" type="image/png" href="../photos/smileicon.png">
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+</head>
+
+<body class="white">
+  <nav class="nav-not-home">
+    <h1>Kyree's Squishies</h1>
+    <div class="nav-buttons">
+      <a href="index.html" class="hoverable" id="len1">home</a>
+      <a href="catalogue.html" class="hoverable site">catalogue</a>
+      <a href="wishlist.html" class="hoverable" id="len2">wishlist</a>
+      <a href="404.html" class="hoverable" id="len3"><p>graveyard</p></a>
+      <a href = "404.html" class="hoverable" id="len4"><p>contact</p></a>
+    </div>
+  </nav>
+
+  <div class="catalogue">
+    <div class="catalogue-description">
+      <h2>Stuffed Animal Catalogue</h2>
+      <p>Click any of the rows below to learn more about that stuffie.<br>This page is still a work in progress, so if it doesn't work, that page probably hasn't been created yet. Try again later!
+      </p>
+    </div>
+
+
+    <table class="highlight-table fold-table">
+
+      <tr id="catalogue-table-header">
+        <td class="not-sortable"></td>
+        <th data-column="name" data-order="desc">name &#9654;</th>
+        <th data-column="squishName" data-order="desc">squish name &#9654;</th>
+        <th data-column="animal" data-order="desc">animal &#9654;</th>
+        <th data-column="sizeRank" data-order="desc">size &#9654;</th>
+        <td class="not-sortable">birthday/<br>date acquired</td>
+      </tr>
+
+      <tbody id='catalogueTable'>
+
+        <script type="text/javascript" src="catalogue-java.js"></script>
+
+      </tbody>
+
+    </table>
+
+  </div>
+
+  <script src="java-files/jquery-3.6.0.js"></script>
+  <script src="java-files/jquery-ui.js"></script>
+  <script src="catalogue-java.js"></script>
+
+</body>
+
+</html>

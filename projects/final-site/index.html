@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Kyree's Squishies</title>
+  <link rel="stylesheet" type="text/css" href = "styles.css">
+  <link rel="icon" type="image/png" href="../../photos/smileicon.png">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+</head>
+
+<body>
+  <nav class="nav">
+    <h1>Kyree's Squishies</h1>
+    <div class = "nav-buttons">
+      <a href = "index.html" class="hoverable site">home</a>
+      <a href = "catalogue.html" class="hoverable" id="len1"><p>catalogue</p></a>
+      <a href = "wishlist.html" class="hoverable" id="len2"><p>wishlist</p></a>
+      <a href = "404.html" class="hoverable" id="len3"><p>graveyard</p></a>
+      <a href = "404.html" class="hoverable" id="len4"><p>contact</p></a>
+    </div>
+  </nav>
+
+  <div class="home-welcome-container">
+    <h1 id="home-scroll">Welcome to my Squish Site</h1>
+    <img src = "photos/pile-new.jpeg"/>
+    <a href="#biography-scroll">
+      <div class = "scroll-button" id="welcome-scroll-button"></div>
+    </a>
+  </div>
+
+  <div class = "home-biography-container" id="biography-scroll">
+    <div class = "home-biography-content" >
+      <h1>About This Site</h1>
+      <p>
+      <img src = "photos/soil.jpeg" alt = "an image of an umbreon pokemon pillow pet" align = "right"/>
+
+      &emsp;&emsp;I have an unhealthy obsession with stuffed animals. Especially Squishmallows. When I see their stupid faces, it makes me smile so much that I just feel compelled to buy them and squish them. I literally can not stop myself – it's a bit of a problem. Whenever I get a new stuffed animal or toy, I tend to give them a name and a backstory, but the problem is I have so many stuffed animals that I'm starting to forget them all. My memory's not the greatest, and as the collection grows, it gets harder and harder to keep track of it all. For a short time, I had forgotten the names of half of my stuffed animals, and I felt like such a bad stuffed animal dad.
+
+      <br><br>
+
+      &emsp;&emsp;So, I made this website is a catalogue of all of them. In this, you can find information about each stuffed animal such as name, animal, and birthday. You can also see which ones are up for trade, up for sale, or have already been sold, or contact me to ask about trading/buying.
+
+      <br><br>
+
+      This site will always be a work in progress.
+      </p>
+    </div>
+
+    <a href="#catalogue-scroll">
+      <div class = "scroll-button" id="biography-scroll-button"></div>
+    </a>
+  </div>
+
+  <div class="home-catalogue-container" id="catalogue-scroll">
+
+    <div class="home-catalogue-top">
+      <h1>Catalogues</h1>
+      <p>
+        There are two catalogues on this site: <br>
+        squishmallows and other stuff animals.
+      </p>
+    </div>
+
+    <div class="home-catalogue-bottom">
+      <div class="catalogue-preview" id="squishmallows-catalogue-preview">
+        <div class="catalogue-preview-items">
+          <a href="catalogue.html"><div class="catalogue-cover"><p class="text">Squishmallows</p></div></a>
+          <img src="photos/avery16.jpeg"/>
+        </div>
+      </div>
+
+      <div class="catalogue-preview" id="others-catalogue-preview">
+        <div class="catalogue-preview-items">
+          <a href="catalogue.html"><div class="catalogue-cover"><p class="text">Others</p></div></a>
+          <img src="photos/non-squish/sleepachu.jpeg">
+        </div>
+      </div>
+
+    </div>
+
+    <a href="#wishlist-scroll">
+      <div class = "scroll-button" id="catalogue-scroll-button"></div>
+    </a>
+
+  </div>
+
+  <div class="home-wishlist-container" id="wishlist-scroll">
+    <a href="#graveyard-scroll">
+      <div class = "scroll-button" id="wishlist-scroll-button"></div>
+    </a>
+  </div>
+
+  <div class="home-graveyard-container" id="graveyard-scroll">
+    <a href="#home-scroll">
+      <div class = "scroll-button" id="graveyard-scroll-button"></div>
+    </a>
+  </div>
+
+</body>
+
+<script
+  src="https://code.jquery.com/jquery-3.6.0.js"
+  integrity="sha256-H+K7U5CnXl1h5ywQfKtSj8PCmoN9aaq30gDh27Xc0jk="
+  crossorigin="anonymous"></script>
+  <script src="java-files/jquery-ui.js"></script>
+<script src="index-java.js"> </script>
+
+</html>

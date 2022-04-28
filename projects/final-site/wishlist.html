@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <title>Kyree's Squishies - wishlist</title>
+  <link rel="stylesheet" type="text/css" href="styles.css">
+  <link rel="icon" type="image/png" href="../photos/smileicon.png">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+</head>
+
+<body class="white">
+  <nav  class="nav-not-home">
+    <h1>Kyree's Squishies</h1>
+    <div class="nav-buttons">
+      <a href="index.html" class="hoverable" id="len1">home</a>
+      <a href="catalogue.html" class="hoverable" id="len2">catalogue</a>
+      <a href="wishlist.html" class="hoverable site">wishlist</a>
+      <a href="404.html" class="hoverable" id="len3"><p>graveyard</p></a>
+      <a href = "404.html" class="hoverable" id="len4"><p>contact</p></a>
+    </div>
+  </nav>
+  <div class="wishlist">
+    <h2>Squishmallow wishlist</h2>
+    <p>This is a wishlist of all the squishmallows I hope to find or want to buy in the future. <br>This page is a work in progress.</p>
+
+    <h3>Key:</h3>
+    <ul>
+      <li><span>♥♥♥♥</span> – Desperately In Search Of (DISO)</li>
+      <li><span>♥♥♥</span> – In Search Of (ISO)</li>
+      <li><span>♥♥</span> – casually In Search Of</li>
+      <li><span>♥</span> – want to get one day but not ISO</li>
+    </ul>
+
+    <table>
+      <tr class="table-header">
+        <th></th>
+        <th data-column="name" data-order="desc">name  &#9654;</th>
+        <th data-column="animal" data-order="desc">animal  &#9654;</th>
+        <th data-column="sizeRank" data-order="desc">size  &#9654;</th>
+        <th data-column="color" data-order="desc">color(s)  &#9654;</th>
+        <th data-column="iso" data-order="desc">ISO ranking  &#9654;</th>
+      </tr>
+
+      <tbody id="wishlistTable">
+
+      </tbody>
+
+      <script type="text/javascript" src="wishlist-java.js"></script>
+
+    </table>
+  </div>
+</body>
+
+</html>

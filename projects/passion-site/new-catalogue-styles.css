@@ -1,0 +1,39 @@
+.singleCol {
+  width: 80%;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+p {
+  height: 100px;
+  width: 200px;
+  border-right: solid 1px black;
+}
+
+.accordion-button {
+    font-size: inherit;
+}
+
+.accordion-item {
+    border: 1px solid rgba(35, 65, 100, .15)
+}
+
+.accordion-button:not(.collapsed) {
+    color: inherit;
+    background: rgb(35,65,100);
+    color: #e8e8e8;
+}
+
+.accordion-button:not(.collapsed)::after  {
+    filter: brightness(00%) invert(70%);
+}
+
+.accordion-button:focus {
+    box-shadow: inherit;
+}
+
+@media (max-width: 767px) {
+    .accordion-body h3 {
+        font-size: calc(.95rem + 1.5vw);
+    }
+}
