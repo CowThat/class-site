@@ -35,6 +35,7 @@
 
   COLORS
 
+  lightest B1ue: #dff7ff
   light B1ue: #B9E2F0
   Baby B1ue: #8ED1EF
   Maya B1ue: #62BFED
@@ -736,13 +737,56 @@ nav a {
   margin: 40px auto;
   max-width: 90vw;
   position: relative;
-  top: 100px;
+  top: 80px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
 }
 
 .catalogue-description {
-  padding: 0 20px;
-  margin: 20px auto 60px auto;
   text-align: center;
+  max-width: 800px;
+}
+
+.catalogue-buttons {
+  display: flex;
+  justify-content: flex-start;
+  margin-top: 40px;
+}
+
+.catalogue-button {
+  background: white;
+  border: solid 2px #62BFED;
+  border-bottom: hidden;
+  border-top-right-radius: 20px;
+  border-top-left-radius: 20px;
+  width: 12vw;
+  min-width: 125px;
+  height: 40px;
+}
+
+#squishmallows-tab{
+  z-index: 3;
+}
+
+#others-tab {
+  transform: translateX(-10px);
+  z-index: 2;
+}
+
+#all-tab {
+  transform: translateX(-20px);
+  z-index: 1;
+}
+
+.active {
+  background: #110659;
+  z-index: 100 !important;
+}
+
+.active p {
+  color: white;
 }
 
 /*
@@ -775,7 +819,9 @@ nav a {
 
 */
 
-
+.table-container {
+  max-width: 1000px;
+}
 
 table {
   margin: 0 auto;
@@ -793,7 +839,7 @@ table img {
 th, td {
   border: solid 1px #62BFED;
   padding: clamp(4px, 1vw, 16px);
-  width: 10vw;
+  width: 20%;
   min-width: 40px;
 }
 
@@ -811,6 +857,12 @@ td {
   text-align: center;
 }
 
+.catalogue-table-header th{
+  background: #8ED1EF;
+  border: solid 1px white;
+  border-bottom: solid 1px #62BFED;
+}
+
 /*hides the borders of the table*/
 tr {
   border-right: hidden;
@@ -818,18 +870,20 @@ tr {
   transition: ease-in-out .2s;
 }
 
-.highlight-table tr:hover {
+.fold-table tr:hover:not(.catalogue-table-header) {
   background: #8ED1EF;
   cursor: pointer;
 }
-
 tbody:last-of-type {
   border-bottom: hidden;
 }
 
-#catalogue-table-header:hover {
-  background: #B9E2F0;
-  cursor: auto;
+table.fold-table>tbody>tr.view:nth-child(4n-1) {
+  background: #dff7ff;
+}
+
+table.fold-table>tbody>tr.view:hover {
+  background: #8ED1EF;
 }
 
 /*
@@ -866,6 +920,8 @@ tbody:last-of-type {
   margin: 40px auto;
   text-align: center;
   width: 800px;
+  position: relative;
+  top: 80px;
 }
 
 .wishlist p {
@@ -1014,7 +1070,7 @@ tbody:last-of-type {
     text-align: center;
   }
 
-  #catalogue-table-header:hover {
+  .catalogue-table-header:hover {
     background: #B9E2F0;
     cursor: auto;
   }
@@ -1050,8 +1106,86 @@ tbody:last-of-type {
     text-align: center;
   }
 
-  #catalogue-table-header:hover {
+  .catalogue-table-header:hover {
     background: #B9E2F0;
     cursor: auto;
   }
 }
+
+
+/*  table {
+  width: 100%;
+}
+
+table th {
+  text-align: left;
+  border-bottom: 1px solid #ccc;
+}
+
+table th,
+table td {
+  padding: 0.4em;
+}
+
+table.fold-table>tbody>tr.view td,
+table.fold-table>tbody>tr.view th {
+  cursor: pointer;
+}
+
+table.fold-table>tbody>tr.view td:first-child,
+table.fold-table>tbody>tr.view th:first-child {
+  position: relative;
+  padding-left: 20px;
+}*/
+/*
+table.fold-table>tbody>tr.view td:first-child:before,
+table.fold-table>tbody>tr.view th:first-child:before {
+  position: absolute;
+  top: 50%;
+  left: 5px;
+  width: 9px;
+  height: 16px;
+  margin-top: -8px;
+  font: 16px fontawesome;
+  color: #999;
+  content: "\f0d7";
+  transition: all 0.3s ease;
+} */
+
+/*colors every other table row*/
+
+
+/* table.fold-table>tbody>tr.view.open {
+  background: tomato;
+  color: white;
+} */
+
+/* table.fold-table>tbody>tr.view.open td:first-child:before,
+table.fold-table>tbody>tr.view.open th:first-child:before {
+  transform: rotate(-180deg);
+  color: #333;
+} */
+
+/* table.fold-table>tbody>tr.fold {
+  display: none;
+}
+
+table.fold-table>tbody>tr.fold.open {
+  display: table-row;
+}
+
+.fold-content {
+  padding: 0.5em;
+}
+
+.fold-content h3 {
+  margin-top: 0;
+}
+
+.fold-content>table {
+  border: 2px solid #ccc;
+}
+
+.fold-content>table>tbody tr:nth-child(even) {
+  background: #eee;
+} */

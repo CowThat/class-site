@@ -3,10 +3,12 @@
 
 <head>
   <title>Catalogue</title>
+  <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/foundation/6.3.0/css/foundation.min.css">
   <link rel="stylesheet" type="text/css" href="styles.css">
-  <link rel="icon" type="image/png" href="../photos/smileicon.png">
+  <link rel="icon" type="image/png" href="../../photos/smileicon.png">
 
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" type="text/css" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
 </head>
 
 <body class="white">
@@ -28,25 +30,63 @@
       </p>
     </div>
 
+    <div class="table-container">
 
-    <table class="highlight-table fold-table">
+      <div class="tab catalogue-buttons">
+        <button class="tablinks catalogue-button" onclick="openCity(event, 'squishmallows-table')" id="squishmallows-tab"><p>squishmallows</p></button>
+        <button class="tablinks catalogue-button" onclick="openCity(event, 'others-table')" id="others-tab"><p>others</p></button>
+        <button class="tablinks catalogue-button" onclick="openCity(event, 'all-table')" id="all-tab"><p>all</p></button>
+      </div>
 
-      <tr id="catalogue-table-header">
-        <td class="not-sortable"></td>
-        <th data-column="name" data-order="desc">name &#9654;</th>
-        <th data-column="squishName" data-order="desc">squish name &#9654;</th>
-        <th data-column="animal" data-order="desc">animal &#9654;</th>
-        <th data-column="sizeRank" data-order="desc">size &#9654;</th>
-        <td class="not-sortable">birthday/<br>date acquired</td>
-      </tr>
+      <div id="squishmallows-table" class="tabcontent">
+        <table class="fold-table">
+          <tr class="catalogue-table-header">
+            <th class="not-sortable"></th>
+            <th class= "table-header" data-column="name" data-order="desc">name &#9654;</th>
+            <th class= "table-header" data-column="squishName" data-order="desc">squish name &#9654;</th>
+            <th class= "table-header" data-column="animal" data-order="desc">animal &#9654;</th>
+            <th class= "table-header" data-column="sizeRank" data-order="desc">size &#9654;</th>
+            <!-- <td class="not-sortable">birthday/<br>date acquired</td> -->
+          </tr>
+          <tbody id='squishmallowTable'>
+            <script type="text/javascript" src="catalogue-java.js"></script>
+          </tbody>
+        </table>
+      </div>
 
-      <tbody id='catalogueTable'>
+      <div id="others-table" class="tabcontent">
+        <table class="fold-table">
+          <tr class="catalogue-table-header">
+            <th class="not-sortable"></th>
+            <th data-column="name" data-order="desc">name &#9654;</th>
+            <!-- <th data-column="squishName" data-order="desc">squish name &#9654;</th> -->
+            <th data-column="animal" data-order="desc">animal &#9654;</th>
+            <th data-column="sizeRank" data-order="desc">size &#9654;</th>
+            <!-- <td class="not-sortable">birthday/<br>date acquired</td> -->
+          </tr>
+          <tbody id='othersTable'>
+            <script type="text/javascript" src="catalogue-java.js"></script>
+          </tbody>
+        </table>
+      </div>
 
-        <script type="text/javascript" src="catalogue-java.js"></script>
+      <div id="all-table" class="tabcontent">
+        <table class="fold-table">
+          <tr class="catalogue-table-header">
+            <td class="not-sortable"></td>
+            <th data-column="name" data-order="desc">name &#9654;</th>
+            <th data-column="squishName" data-order="desc">squish name &#9654;</th>
+            <th data-column="animal" data-order="desc">animal &#9654;</th>
+            <th data-column="sizeRank" data-order="desc">size &#9654;</th>
+            <!-- <td class="not-sortable">birthday/<br>date acquired</td> -->
+          </tr>
+          <tbody id='allTable'>
+            <script type="text/javascript" src="catalogue-java.js"></script>
+          </tbody>
+        </table>
+      </div>
+    </div>
 
-      </tbody>
-
-    </table>
 
   </div>
 

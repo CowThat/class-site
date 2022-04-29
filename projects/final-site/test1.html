@@ -1,0 +1,228 @@
+<!DOCTYPE html>
+
+<head>
+  <title>Sorting Tables w/ JavaScript</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta charset="utf-8" />
+</head>
+<style>
+  .table-sortable th {
+    cursor: pointer;
+  }
+
+  .table-sortable .th-sort-asc::after {
+    content: "\25b4";
+  }
+
+  .table-sortable .th-sort-desc::after {
+    content: "\25be";
+  }
+
+  .table-sortable .th-sort-asc::after,
+  .table-sortable .th-sort-desc::after {
+    margin-left: 5px;
+  }
+
+  .table-sortable .th-sort-asc,
+  .table-sortable .th-sort-desc {
+    background: rgba(0, 0, 0, 0.1);
+  }
+
+  @import url('https://netdna.bootstrapcdn.com/font-awesome/4.0.3/css/font-awesome.css');
+
+  .pcs:after {
+    content: " pcs";
+  }
+
+  .cur:before {
+    content: "$";
+  }
+
+  .per:after {
+    content: "%";
+  }
+
+  * {
+    box-sizing: border-box;
+  }
+
+  body {
+    padding: 0.2em 2em;
+  }
+
+  table {
+    width: 100%;
+  }
+
+  table th {
+    text-align: left;
+    border-bottom: 1px solid #ccc;
+  }
+
+  table th,
+  table td {
+    padding: 0.4em;
+  }
+
+  table.fold-table>tbody>tr.view td,
+  table.fold-table>tbody>tr.view th {
+    cursor: pointer;
+  }
+
+  table.fold-table>tbody>tr.view td:first-child,
+  table.fold-table>tbody>tr.view th:first-child {
+    position: relative;
+    padding-left: 20px;
+  }
+
+  table.fold-table>tbody>tr.view td:first-child:before,
+  table.fold-table>tbody>tr.view th:first-child:before {
+    position: absolute;
+    top: 50%;
+    left: 5px;
+    width: 9px;
+    height: 16px;
+    margin-top: -8px;
+    font: 16px fontawesome;
+    color: #999;
+    content: "\f0d7";
+    transition: all 0.3s ease;
+  }
+
+  table.fold-table>tbody>tr.view:nth-child(4n-1) {
+    background: #eee;
+  }
+
+  table.fold-table>tbody>tr.view:hover {
+    background: #000;
+  }
+
+  table.fold-table>tbody>tr.view.open {
+    background: tomato;
+    color: white;
+  }
+
+  table.fold-table>tbody>tr.view.open td:first-child:before,
+  table.fold-table>tbody>tr.view.open th:first-child:before {
+    transform: rotate(-180deg);
+    color: #333;
+  }
+
+  table.fold-table>tbody>tr.fold {
+    display: none;
+  }
+
+  table.fold-table>tbody>tr.fold.open {
+    display: table-row;
+  }
+
+  .fold-content {
+    padding: 0.5em;
+  }
+
+  .fold-content h3 {
+    margin-top: 0;
+  }
+
+  .fold-content>table {
+    border: 2px solid #ccc;
+  }
+
+  .fold-content>table>tbody tr:nth-child(even) {
+    background: #eee;
+  }
+</style>
+
+<body>
+  <table class="table-sortable fold-table">
+    <thead>
+
+      <tr>
+        <th>Rank</th>
+        <th>Name</th>
+        <th>Age</th>
+        <th>Occupation</th>
+      </tr>
+    </thead>
+    <tbody>
+
+      <tr class="view">
+        <td>1</td>
+        <td>Dom</td>
+        <td>35</td>
+        <td>Web Developer</td>
+      </tr>
+
+      <tr class="view">
+        <td>2</td>
+        <td>Rebecca</td>
+        <td>29</td>
+        <td>Teacher</td>
+      </tr>
+
+      <tr class="view">
+        <td>3</td>
+        <td>John</td>
+        <td>30</td>
+        <td>Civil Engineer</td>
+        <td class="fold"><div>poop</div></td>
+      </tr>
+
+      <tr class="view">
+        <td>4</td>
+        <td>Andre</td>
+        <td>20</td>
+        <td>Dentist</td>
+      </tr>
+    </tbody>
+  </table>
+  <script src="java-files/jquery-3.6.0.js"></script>
+  <script src="java-files/jquery-ui.js"></script>
+  <script>
+    function sortTableByColumn(table, column, asc = true) {
+      const dirModifier = asc ? 1 : -1;
+      const tBody = table.tBodies[0];
+      const rows = Array.from(tBody.querySelectorAll("tr"));
+
+      // Sort each row
+      const sortedRows = rows.sort((a, b) => {
+        const aColText = a.querySelector(`td:nth-child(${ column + 1 })`).textContent.trim();
+        const bColText = b.querySelector(`td:nth-child(${ column + 1 })`).textContent.trim();
+
+        return aColText > bColText ? (1 * dirModifier) : (-1 * dirModifier);
+      });
+
+      // Remove all existing TRs from the table
+      while (tBody.firstChild) {
+        tBody.removeChild(tBody.firstChild);
+      }
+
+      // Re-add the newly sorted rows
+      tBody.append(...sortedRows);
+
+      // Remember how the column is currently sorted
+      table.querySelectorAll("th").forEach(th => th.classList.remove("th-sort-asc", "th-sort-desc"));
+      table.querySelector(`th:nth-child(${ column + 1})`).classList.toggle("th-sort-asc", asc);
+      table.querySelector(`th:nth-child(${ column + 1})`).classList.toggle("th-sort-desc", !asc);
+    }
+
+    document.querySelectorAll(".table-sortable th").forEach(headerCell => {
+      headerCell.addEventListener("click", () => {
+        const tableElement = headerCell.parentElement.parentElement.parentElement;
+        const headerIndex = Array.prototype.indexOf.call(headerCell.parentElement.children, headerCell);
+        const currentIsAscending = headerCell.classList.contains("th-sort-asc");
+
+        sortTableByColumn(tableElement, headerIndex, !currentIsAscending);
+      });
+    });
+
+
+
+    $('tr.view').click(function(){
+        $(this).nextUntil('tr.view').css('display', function(i,v){
+            return this.style.display === 'table-row' ? 'none' : 'table-row';
+        });
+    });
+
+  </script>
+</body>
