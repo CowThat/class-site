@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <title>Catalogue</title>
+  <link rel="stylesheet" type="text/css" href="styles.css">
+  <link rel="icon" type="image/png" href="../../photos/smileicon.png">
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" type="text/css" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+</head>
+
+<body class="white">
+  <nav class="nav-not-home">
+    <h1>Kyree's Squishies</h1>
+    <div class="nav-buttons">
+      <a href="index.html" class="hoverable" id="len1">home</a>
+      <a href="catalogue.html" class="hoverable site">catalogue</a>
+      <a href="wishlist.html" class="hoverable" id="len2">wishlist</a>
+      <a href="404.html" class="hoverable" id="len3"><p>graveyard</p></a>
+      <a href = "404.html" class="hoverable" id="len4"><p>contact</p></a>
+    </div>
+  </nav>
+
+  <div class="catalogue">
+    <div class="catalogue-description">
+      <h2>Stuffed Animal Catalogue</h2>
+      <p>Click any of the rows below to learn more about that stuffie.<br>This page is still a work in progress, so if it doesn't work, that page probably hasn't been created yet. Try again later!
+      </p>
+    </div>
+
+    <div class="table-container">
+
+      <div class="tab catalogue-buttons">
+        <button class="tablinks catalogue-button" onclick="openCity(event, 'squishmallows-table')" id="squishmallows-tab"><p>squishmallows</p></button>
+        <button class="tablinks catalogue-button" onclick="openCity(event, 'others-table')" id="others-tab"><p>others</p></button>
+        <button class="tablinks catalogue-button" onclick="openCity(event, 'all-table')" id="all-tab"><p>all</p></button>
+      </div>
+
+      <div id="squishmallows-table" class="tabcontent">
+        <table class="fold-table">
+          <tr class="catalogue-table-header">
+            <th class="not-sortable"></th>
+            <th class= "table-header" data-column="name" data-order="desc">name &#9654;</th>
+            <th class= "table-header" data-column="squishName" data-order="desc">squish name &#9654;</th>
+            <th class= "table-header" data-column="animal" data-order="desc">animal &#9654;</th>
+            <th class= "table-header" data-column="sizeRank" data-order="desc">size &#9654;</th>
+            <!-- <td class="not-sortable">birthday/<br>date acquired</td> -->
+          </tr>
+          <tbody id='squishmallowTable'>
+            <script type="text/javascript" src="catalogue-java.js"></script>
+          </tbody>
+        </table>
+      </div>
+
+      <div id="others-table" class="tabcontent">
+        <table class="fold-table">
+          <tr class="catalogue-table-header">
+            <th class="not-sortable"></th>
+            <th data-column="name" data-order="desc">name &#9654;</th>
+            <!-- <th data-column="squishName" data-order="desc">squish name &#9654;</th> -->
+            <th data-column="animal" data-order="desc">animal &#9654;</th>
+            <th data-column="sizeRank" data-order="desc">size &#9654;</th>
+            <!-- <td class="not-sortable">birthday/<br>date acquired</td> -->
+          </tr>
+          <tbody id='othersTable'>
+            <script type="text/javascript" src="catalogue-java.js"></script>
+          </tbody>
+        </table>
+      </div>
+
+      <div id="all-table" class="tabcontent">
+        <table class="fold-table">
+          <tr class="catalogue-table-header">
+            <td class="not-sortable"></td>
+            <th data-column="name" data-order="desc">name &#9654;</th>
+            <th data-column="squishName" data-order="desc">squish name &#9654;</th>
+            <th data-column="animal" data-order="desc">animal &#9654;</th>
+            <th data-column="sizeRank" data-order="desc">size &#9654;</th>
+            <!-- <td class="not-sortable">birthday/<br>date acquired</td> -->
+          </tr>
+          <tbody id='allTable'>
+            <script type="text/javascript" src="catalogue-java.js"></script>
+          </tbody>
+        </table>
+      </div>
+    </div>
+
+
+  </div>
+
+  <script src="java-files/jquery-3.6.0.js"></script>
+  <script src="java-files/jquery-ui.js"></script>
+  <script src="https://cdn.datatables.net/1.11.5/js/jquery.dataTables.min.js></script>
+  <script src="catalogue-java.js"></script>
+
+</body>
+
+</html>

@@ -35,8 +35,8 @@
 
   COLORS
 
-  lightest B1ue: #dff7ff
-  light B1ue: #B9E2F0
+  lightest B1ue for table: #dff7ff
+  light B1ue nav bar: #B9E2F0
   Baby B1ue: #8ED1EF
   Maya B1ue: #62BFED
   B1ue Pantone: #3423A6
@@ -187,13 +187,13 @@ nav {
   justify-content: space-around;
   align-items: center;
   flex-wrap: nowrap;
-  z-index:999;
+  z-index:99999;
   transition: ease .2s;
 }
 
 .nav-not-home {
   background: #B9E2F0;
-  box-shadow: 0 4px 12px -8px;
+  box-shadow: 0 4px 12px -8px #3423A6;
 }
 
 nav h1 {
@@ -228,7 +228,6 @@ nav a {
   vertical-align: middle;
   position:relative;
   top: 15px;
-  box-shadow: 0 0 1px rgba(0,0,0,0);
   transform: translateZ(0);
   transition: transform .3s;
 }
@@ -343,7 +342,7 @@ nav a {
 }
 
 .home-welcome-container h1 {
-  color:white;
+  color: white;
   font-style: Raleway;
   text-align: center;
   max-width: 1000px;
@@ -356,7 +355,7 @@ nav a {
 /* SCROLL BUTTON */
 
 .scroll-button {
-  background: #62BFED;
+  background: #62BFED;;
   border: 4px solid white;
   border-radius: 50px;
   width: 50px;
@@ -367,6 +366,7 @@ nav a {
   transform: translate(-50%, 50%);
   cursor: pointer;
   transition: ease-in-out .3s;
+  z-index: 1000;
 }
 
 .scroll-button:hover {
@@ -399,7 +399,7 @@ nav a {
 /* BIOGRAPHY */
 
 .home-biography-container {
-  background: white;
+  background: #8ED1EF;
   width: 100%;
   height: 100vh;
   max-height: 100vh;
@@ -456,7 +456,7 @@ nav a {
 }
 
 #biography-scroll-button:hover {
-  background: #62BFED;
+  background: #8ED1EF;
   transform:  translate(-50%, 50%) scale(1.1);
 }
 
@@ -504,8 +504,8 @@ nav a {
 .catalogue-preview {
   border: solid 4px white;
   margin-bottom: 20px;
-  width: 350px;
-  height: 350px;
+  max-width: 20vw;
+  height: 20vw;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -579,8 +579,8 @@ nav a {
 
 /* WISHLIST */
 
-.home-wishlist-container {
-  background: #62BFED;
+.home-wishlist-container  {
+  background: white;
   width: 100%;
   height: 100vh;
   max-height: 100vh;
@@ -589,6 +589,92 @@ nav a {
   display: flex;
   justify-content: center;
   align-items: center;
+  flex-wrap: wrap;
+  overflow: hidden;
+}
+
+.home-wishlist-top {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  text-align: center;
+  position: relative;
+  top: 70px;
+}
+
+.home-wishlist-top p{
+  padding: 20px
+
+}
+
+.wishlist {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  flex-direction: column;
+}
+
+.wishlist-link {
+  text-decoration: none;
+}
+
+.wishlist-link  div {
+  border: solid 4px #3423A6;
+  border-radius: 20px;
+  width: 175px;
+  height: 40px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  transition: .25s ease-in-out;
+}
+
+.wishlist-link  div:hover {
+  transform: scale(1.1);
+  background: #8ED1EF;
+}
+
+.wishlist-icons {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+  padding: 40px 25vw;
+  overflow: hidden;
+}
+
+.show-name img{
+  min-width: 100px;
+  min-height: 100px;
+  width: 9vw;
+  height: 9vw;
+  object-fit: contain;
+  padding: 10px;
+}
+
+.show-name {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  transition: transform .25s ease-in-out;
+  z-index: 1000;
+}
+
+.show-name p {
+  position: absolute;
+  z-index: 100;
+  cursor: default;
+  opacity: 0;
+  transition: opacity .25s ease-in-out;
+}
+
+.show-name:hover {
+  transform: scale(1.1);
+}
+
+.show-name:hover p {
+  opacity: 1;
 }
 
 #wishlist-scroll-button {
@@ -607,7 +693,7 @@ nav a {
 }
 
 #wishlist-scroll-button:hover {
-  background: white;
+  background: #62BFED;
   position: absolute;
   bottom: 100px;
   left: 50%;
@@ -630,7 +716,7 @@ nav a {
 
 #graveyard-scroll-button {
   background: #62BFED;
-  border: 4px solid white;
+  border: 4px solid #3423A6;
   border-radius: 50px;
   width: 50px;
   height: 80px;
@@ -650,7 +736,7 @@ nav a {
 /* adds the first down arrow */
 #graveyard-scroll-button::before,
 #graveyard-scroll-button::after {
-  border: 4px solid white;
+  border: 4px solid #3423A6;
   border-bottom: transparent;
   border-right: transparent;
   content: "";
@@ -734,8 +820,8 @@ nav a {
 */
 
 .catalogue {
-  margin: 40px auto;
-  max-width: 90vw;
+  margin: 40px 0;
+  max-width: 100%;
   position: relative;
   top: 80px;
   display: flex;
@@ -744,12 +830,18 @@ nav a {
   flex-direction: column;
 }
 
-.catalogue-description {
+.description {
   text-align: center;
-  max-width: 800px;
+  display: flex;
+  justify-items: flex-start;
+  align-items: center;
+  flex-direction: column;
+  min-width: 400px;
+  max-width: 40vw;
+  padding: 0 20px;
 }
 
-.catalogue-buttons {
+.tab {
   display: flex;
   justify-content: flex-start;
   margin-top: 40px;
@@ -820,27 +912,77 @@ nav a {
 */
 
 .table-container {
-  max-width: 1000px;
+  margin: 0 25px 50px 25px;
+  min-width: 600px;
+  max-width: 60vw;
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
 }
 
-table {
-  margin: 0 auto;
+.table-container table {
   border-collapse: collapse;
+  width: 100%;
+  position: relative;
 }
 
-table img {
-  width: 8vw;
-  height: 8vw;
-  max-width: 100px;
-  max-height: 100px;
+.table-container table img {
+  min-width:50px;
+  min-height: 80px;
+  max-width: 90%;
+  max-height: 125px;
   object-fit: contain;
 }
 
-th, td {
+.table-container th, td {
   border: solid 1px #62BFED;
-  padding: clamp(4px, 1vw, 16px);
-  width: 20%;
-  min-width: 40px;
+  padding: 1vw;
+  min-width: 10%;
+}
+
+.wishlist-table th {
+  background: #8ED1EF;
+  border: solid 1px white;
+  border-bottom: solid 1px #62BFED;
+}
+
+#others-table {
+  width: 60vw;
+}
+
+#others-table td {
+  width: 25%;
+}
+
+#others-table tr:nth-child(even), .wishlist-table tr:nth-child(even) {
+  background: #dff7ff;
+}
+
+#others-table tr:nth-child(odd) {
+  background: white;
+}
+
+#graveyard-table tr:nth-child(odd){
+  background: transparent;
+}
+
+#graveyard-table tr:nth-child(even){
+  background: #3423A6;
+}
+
+#graveyard-table th {
+  color: white;
+  background: #3423A6;
+  border: solid 1px #62BFED;
+  border-top: transparent;
+}
+
+#graveyard-table td {
+  color: white;
+}
+
+#graveyard-table a {
+  color: white;
 }
 
 th, .not-sortable {
@@ -870,21 +1012,38 @@ tr {
   transition: ease-in-out .2s;
 }
 
-.fold-table tr:hover:not(.catalogue-table-header) {
-  background: #8ED1EF;
-  cursor: pointer;
-}
 tbody:last-of-type {
   border-bottom: hidden;
 }
 
-table.fold-table>tbody>tr.view:nth-child(4n-1) {
+.fold-table tr:nth-child(4n+3), .fold-table tr:nth-child(4n+4) {
   background: #dff7ff;
 }
 
-table.fold-table>tbody>tr.view:hover {
-  background: #8ED1EF;
+.view {
+  border-bottom: dotted rgba(98, 191, 237, 0.4);
+
 }
+
+td.fold {
+  border-left: hidden;
+  border-right: hidden;
+}
+
+div.fold-content p {
+  text-align: left;
+  font-size: 18px;
+  margin: .5vw 0;
+}
+
+.fold-content span:not(.dont-underline) {
+  text-decoration: underline;
+}
+
+.table-header:hover {
+  cursor: pointer !important;
+}
+
 
 /*
 
@@ -919,7 +1078,7 @@ table.fold-table>tbody>tr.view:hover {
 .wishlist {
   margin: 40px auto;
   text-align: center;
-  width: 800px;
+  max-width:60vw;
   position: relative;
   top: 80px;
 }
@@ -943,113 +1102,83 @@ table.fold-table>tbody>tr.view:hover {
 
 
 
-  BIOGRAPHY PAGE
-
+GRAVEYARD
 
 
 
 
 */
 
-.biography {
-  width: 800px;
-  margin: 0 auto;
-  display: block;
-  width: 50%;
+.graveyard {
+  background: #0d0350;
+  width: 100%;
+  min-height: 100vh;
+  position: relative;
+  top: 60px;
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  flex-direction: column;
 }
 
-.biography img {
-  float: left;
-  height: 400px;
-  width: 400px;
-  margin: 0 60px 20px 0;
-  object-fit: contain;
+.graveyard-description {
+  margin: 40px;
 }
 
-.back-to-catalogue {
-  display: block;
-  margin: 40px 0;
-}
 
-.biography a {
-  text-decoration: none;
-  transition: ease-in-out .2s;
-  color: #3423A6;
-}
 
-.biography a:hover {
-  text-decoration: underline;
-  color: #3423A6;
-}
-
-.biography a:visited {
-  color: #3423A6;
-}
-
-.biography-content table {
-  margin: 0;
-}
-
-.biography-content th {
-  font-family: HappyChicken;
-  align-text: right;
-  width: 240px;
-}
-
-.biography-content td {
-  align-text: left;
-  width: 400px;
-}
-
-.about {
-  margin-top: 40px;
-  line-height: 24px;
-}
-
-.about span {
-  font-family: HappyChicken;
-}
-
-.about a {
-  color: #7E2EED;
-  text-decoration: underline;
-}
-
-.about a:visited {
-  color: #7E2EED;
-}
-
-.about a:hover {
-  color: #3423A6;
-  text-decoration: underline;
-}
 
 /*
 
-.biography-content ul {
-  list-style: inside;
-}
 
-.biography-content li {
-  font-family: PinkChicken;
-  font-size: 24px;
-  color: #3423A6;
-  margin: 0;
-}
 
-.biography-content li span {
-  font-family: HappyChicken;
-  font-size: 20px;
-}
+MEDIA SCREENS
+
+
 
 */
 
-@media screen and (max-width: 900px){
 
-  .catalogue-description {
-    margin: 0 auto 40px auto;
-    text-align: center;
+@media screen and (max-width: 1150px) {
+
+  .table-container th {
+    font-size: 12px;
   }
+
+  .table-container td, .fold-p p, .fold-p span {
+    font-size: 16px;
+    padding: 0px;
+    margin: 10px 0;
+  }
+
+}
+
+@media screen and (max-width: 600px) {
+
+  p {
+    font-size: 16px;
+  }
+
+  .table-container {
+    min-width: 400px;
+  }
+
+  .table-container th {
+    font-size: 10px;
+  }
+
+  .table-container td, .fold-p p, .fold-p span {
+    font-size: 14px;
+    padding: 0px;
+    margin: 10px 0;
+  }
+
+
+}
+
+
+
+/* @media screen and (max-width: 900px){
 
   th, td {
     width: 10vw;
@@ -1078,11 +1207,6 @@ table.fold-table>tbody>tr.view:hover {
 
 @media screen and (max-width: 600px){
 
-  .catalogue-description {
-    margin: 0 auto 40px auto;
-    text-align: center;
-  }
-
   p {
     font-size: 16px;
   }
@@ -1110,7 +1234,29 @@ table.fold-table>tbody>tr.view:hover {
     background: #B9E2F0;
     cursor: auto;
   }
-}
+} */
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 /*  table {
@@ -1189,3 +1335,90 @@ table.fold-table>tbody>tr.fold.open {
 .fold-content>table>tbody tr:nth-child(even) {
   background: #eee;
 } */
+
+/* table.fold-table>tbody>tr.view:hover {
+  background: #8ED1EF;
+} */
+
+/* .fold-table tr:hover:not(.catalogue-table-header) {
+  background: #8ED1EF;
+  cursor: pointer;
+} */
+
+
+
+
+/*
+.biography {
+  width: 800px;
+  margin: 0 auto;
+  display: block;
+  width: 50%;
+}
+
+.biography img {
+  float: left;
+  height: 400px;
+  width: 400px;
+  margin: 0 60px 20px 0;
+  object-fit: contain;
+}
+
+.back-to-catalogue {
+  display: block;
+  margin: 40px 0;
+}
+
+.biography a {
+  text-decoration: none;
+  transition: ease-in-out .2s;
+  color: #3423A6;
+}
+
+.biography a:hover {
+  text-decoration: underline;
+  color: #3423A6;
+}
+
+.biography a:visited {
+  color: #3423A6;
+}
+
+.biography-content table {
+  margin: 0;
+}
+
+.biography-content th {
+  font-family: HappyChicken;
+  align-text: right;
+  width: 240px;
+}
+
+.biography-content td {
+  align-text: left;
+  width: 400px;
+}
+
+.about {
+  margin-top: 40px;
+  line-height: 24px;
+}
+
+.about span {
+  font-family: HappyChicken;
+}
+
+.about a {
+  color: #7E2EED;
+  text-decoration: underline;
+}
+
+.about a:visited {
+  color: #7E2EED;
+}
+
+.about a:hover {
+  color: #3423A6;
+  text-decoration: underline;
+}
+ */

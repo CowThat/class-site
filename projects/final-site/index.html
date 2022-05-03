@@ -15,8 +15,8 @@
       <a href = "index.html" class="hoverable site">home</a>
       <a href = "catalogue.html" class="hoverable" id="len1"><p>catalogue</p></a>
       <a href = "wishlist.html" class="hoverable" id="len2"><p>wishlist</p></a>
-      <a href = "404.html" class="hoverable" id="len3"><p>graveyard</p></a>
-      <a href = "404.html" class="hoverable" id="len4"><p>contact</p></a>
+      <a href = "graveyard.html" class="hoverable" id="len3"><p>graveyard</p></a>
+      <a href = "contact.html" class="hoverable" id="len4"><p>contact</p></a>
     </div>
   </nav>
 
@@ -34,15 +34,11 @@
       <p>
       <img src = "photos/soil.jpeg" alt = "an image of an umbreon pokemon pillow pet" align = "right"/>
 
-      &emsp;&emsp;I have an unhealthy obsession with stuffed animals. Especially Squishmallows. When I see their stupid faces, it makes me smile so much that I just feel compelled to buy them and squish them. I literally can't stop myself – it's a bit of a problem. Whenever I get a new stuffed animal or toy, I tend to give them a name and a backstory, but the problem is I have so many stuffed animals that I'm starting to forget them all. My memory's isn't the greatest, and as the collection grows, it gets harder and harder to keep track of it all. For a short time, I had forgotten the names of half of my stuffed animals, and I felt like such a bad stuffed animal dad.
+      &emsp;&emsp;I have an unhealthy obsession with stuffed animals, especially Squishmallows. When I see their stupid faces, it makes me smile so much that I just feel compelled to buy them and squish them. I literally can't stop myself – it's a bit of a problem. Whenever I get a new stuffed animal or toy, I tend to give them a name and a backstory, but the problem is I have so many stuffed animals that I'm starting to forget them all. My memory's isn't the greatest, and as the collection grows, it gets harder and harder to keep track of it all. For a short time, I had forgotten the names of half of my stuffed animals, and I felt like such a bad stuffed animal dad.<br><br>
 
-      <br><br>
+      &emsp;&emsp;So, I made this website is a catalogue of all of them. In this, you can find information about each stuffed animal such as name, animal, and birthday. You can also see which ones are up for trade, up for sale, have already been traded/sold, or contact me to ask about trading/buying.<br><br>
 
-      &emsp;&emsp;So, I made this website is a catalogue of all of them. In this, you can find information about each stuffed animal such as name, animal, and birthday. You can also see which ones are up for trade, up for sale, or have already been sold, or contact me to ask about trading/buying.
-
-      <br><br>
-
-      This site will always be a work in progress.
+      This site will always be a work in progress, so if something is working, reload the page or give it a try later!
       </p>
     </div>
 
@@ -85,24 +81,56 @@
   </div>
 
   <div class="home-wishlist-container" id="wishlist-scroll">
-    <a href="#graveyard-scroll">
-      <div class = "scroll-button" id="wishlist-scroll-button"></div>
-    </a>
-  </div>
+    <div class="home-wishlist-top">
+      <h1>Wishlist</h1>
+      <p>
+        This page is a table of all of my ISO (In Search Of) Squishmallows.
+        <br>
+        Hover or drag any of the images below to see their name,
+        <br>
+        or click the link below to go to the wishlist.
+      </p>
+      <a href="wishlist.html" class="wishlist-link"><div><p>to the wishlist</p></div></a>
+    </div>
+    <div class="wishlist-icons">
+      <div class="show-name"><p>Abby</p><img src="photos/wishlist/abby.jpeg"></div>
+      <div class="show-name"><p>Violet</p><img src="photos/wishlist/violet.jpeg"></div>
+      <div class="show-name"><p>Jarin</p><img src="photos/wishlist/jarin.jpeg"></div>
+      <div class="show-name"><p>Veronica</p><img src="photos/wishlist/veronica-AUS.jpeg"></div>
+      <div class="show-name"><p>Zobey</p><img src="photos/wishlist/zobey.jpeg"></div>
+      <div class="show-name"><p>Armie</p><img src="photos/wishlist/armie.jpeg"></div>
+      <div class="show-name"><p>Belana</p><img src="photos/wishlist/belana.jpeg"></div>
+      <div class="show-name"><p>Avery</p><img src="photos/wishlist/avery-stack.jpeg"></div>
+      <div class="show-name"><p>Colin</p><img src="photos/wishlist/colin.jpeg"></div>
+      <div class="show-name"><p>Connor</p><img src="photos/wishlist/connor.jpeg"></div>
+      <div class="show-name"><p>Maggie</p><img src="photos/wishlist/maggie.jpeg"></div>
+      <div class="show-name"><p>Norbu</p><img src="photos/wishlist/norbu.jpeg"></div>
+      <div class="show-name"><p>Perry</p><img src="photos/wishlist/perry.jpeg"></div>
+      <div class="show-name"><p>Samir</p><img src="photos/wishlist/samir.jpeg"></div>
+      <div class="show-name"><p>Rocket</p><img src="photos/wishlist/rocket.jpeg"></div>
+    </div>
 
-  <div class="home-graveyard-container" id="graveyard-scroll">
+    <!-- <a href="#graveyard-scroll">
+      <div class = "scroll-button" id="wishlist-scroll-button"></div>
+    </a> -->
     <a href="#home-scroll">
       <div class = "scroll-button" id="graveyard-scroll-button"></div>
     </a>
+
   </div>
 
-</body>
+  <!-- <div class="home-graveyard-container" id="graveyard-scroll">
+    <a href="#home-scroll">
+      <div class = "scroll-button" id="graveyard-scroll-button"></div>
+    </a>
+  </div> -->
 
-<script
-  src="https://code.jquery.com/jquery-3.6.0.js"
+
+<script src="https://code.jquery.com/jquery-3.6.0.js"
   integrity="sha256-H+K7U5CnXl1h5ywQfKtSj8PCmoN9aaq30gDh27Xc0jk="
   crossorigin="anonymous"></script>
 <script src="java-files/jquery-ui.js"></script>
-<script src="index-java.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/@splidejs/splide@2.4.21/dist/js/splide.min.js"></script><script src="index-java.js"></script>
 
+</body>
 </html>

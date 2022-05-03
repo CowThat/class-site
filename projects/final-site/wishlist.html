@@ -17,39 +17,46 @@
       <a href="index.html" class="hoverable" id="len1">home</a>
       <a href="catalogue.html" class="hoverable" id="len2">catalogue</a>
       <a href="wishlist.html" class="hoverable site">wishlist</a>
-      <a href="404.html" class="hoverable" id="len3"><p>graveyard</p></a>
-      <a href = "404.html" class="hoverable" id="len4"><p>contact</p></a>
+      <a href="graveyard.html" class="hoverable" id="len3"><p>graveyard</p></a>
+      <a href = "graveyard.html" class="hoverable" id="len4"><p>contact</p></a>
     </div>
   </nav>
+
   <div class="wishlist">
-    <h2>Squishmallow wishlist</h2>
-    <p>This is a wishlist of all the squishmallows I hope to find or want to buy in the future. <br>This page is a work in progress.</p>
+    <div class="description wishlist-description">
+      <h2>Squishmallow wishlist</h2>
+      <p>I collect primarily sea animals, cows, and ducks. This is a wishlist of all the squishmallows I hope to find or want to buy in the future. <br><br>
+      I am open to things outside of this list as well, but these are the ones that are most important to me. To put together a trade with one of these squishmallows, go to the <a href="contact.html">contact</a> page.
+      </p>
 
-    <h3>Key:</h3>
-    <ul>
-      <li><span>♥♥♥♥</span> – Desperately In Search Of (DISO)</li>
-      <li><span>♥♥♥</span> – In Search Of (ISO)</li>
-      <li><span>♥♥</span> – casually In Search Of</li>
-      <li><span>♥</span> – want to get one day but not ISO</li>
-    </ul>
+      <h3>Key:</h3>
+      <ul>
+        <li><span>♥♥♥♥</span> – Desperately In Search Of (DISO)</li>
+        <li><span>♥♥♥</span> – In Search Of (ISO)</li>
+        <li><span>♥♥</span> – casually In Search Of</li>
+        <li><span>♥</span> – want to get one day but not ISO</li>
+      </ul>
+    </div>
 
-    <table>
-      <tr class="table-header">
-        <th></th>
-        <th data-column="name" data-order="desc">name  &#9654;</th>
-        <th data-column="animal" data-order="desc">animal  &#9654;</th>
-        <th data-column="sizeRank" data-order="desc">size  &#9654;</th>
-        <th data-column="color" data-order="desc">color(s)  &#9654;</th>
-        <th data-column="iso" data-order="desc">ISO ranking  &#9654;</th>
-      </tr>
+    <div class="table-container">
+      <table class="wishlist-table">
+        <tr class="table-header">
+          <th></th>
+          <th data-column="name" data-order="desc">name  &#9654;</th>
+          <th data-column="animal" data-order="desc">animal  &#9654;</th>
+          <th data-column="sizeRank" data-order="desc">size  &#9654;</th>
+          <th data-column="color" data-order="desc">color(s)  &#9654;</th>
+          <th data-column="iso" data-order="desc">ISO ranking  &#9654;</th>
+        </tr>
 
-      <tbody id="wishlistTable">
+        <tbody id="wishlistTable">
 
-      </tbody>
+        </tbody>
 
-      <script type="text/javascript" src="wishlist-java.js"></script>
+        <script type="text/javascript" src="wishlist-java.js"></script>
 
-    </table>
+      </table>
+    </div>
   </div>
 </body>
 

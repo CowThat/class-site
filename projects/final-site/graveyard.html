@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Kyree's Squishies</title>
+  <link rel="stylesheet" type="text/css" href = "styles.css">
+  <link rel="icon" type="image/png" href="../../photos/smileicon.png">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+</head>
+
+<body>
+  <nav class="nav-not-home">
+    <h1>Kyree's Squishies</h1>
+    <div class = "nav-buttons">
+      <a href = "index.html" class="hoverable" id="len1">home</a>
+      <a href = "catalogue.html" class="hoverable" id="len2"><p>catalogue</p></a>
+      <a href = "wishlist.html" class="hoverable" id="len3"><p>wishlist</p></a>
+      <a href = "graveyard.html" class="hoverable site"><p>graveyard</p></a>
+      <a href = "contact.html" class="hoverable" id="len4"><p>contact</p></a>
+    </div>
+  </nav>
+
+  <div class="graveyard">
+    <div class="description graveyard-description">
+      <h2>Graveyard</h2>
+      <p>The graveyard shows all of the squishmallows that I have traded or sold. They will always be remembered, even if they are no longer with me.</p>
+    </div>
+
+    <div id="graveyard-table" class="table-container">
+      <table class="fold-table">
+        <tr class="catalogue-table-header">
+          <th class="not-sortable"></th>
+          <th class= "table-header" data-column="squishName" data-order="desc">squish name &#9654;</th>
+          <th class= "table-header" data-column="name" data-order="desc">nickname &#9654;</th>
+          <th class= "table-header" data-column="animal" data-order="desc">animal &#9654;</th>
+          <th class= "table-header" data-column="sizeRank" data-order="desc">size &#9654;</th>
+          <th class= "table-header" data-column="st" data-order="desc">sold/traded &#9654;</th>
+        </tr>
+        <tbody id='graveyardTable'>
+          <script type="text/javascript" src="graveyard-java.js"></script>
+        </tbody>
+      </table>
+    </div>
+  </div>
+
+  <script src="java-files/jquery-3.6.0.js"></script>
+  <script src="java-files/jquery-ui.js"></script>
+  <script src="graveyard-java.js"></script>
+  <script>
+  $(function(){
+    var str = '#len'; //increment by 1 up to 1-nelemnts
+    $(document).ready(function(){
+      var i, stop;
+      i = 1;
+      stop = 4; //num elements
+      setInterval(function(){
+        if (i > stop){
+          return;
+        }
+        $('#len'+(i++)).toggleClass('bounce');
+      }, 200)
+    });
+  });
+  </script>
+
+</body>
+</html>

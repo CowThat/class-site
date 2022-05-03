@@ -3,7 +3,6 @@
 
 <head>
   <title>Catalogue</title>
-  <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/foundation/6.3.0/css/foundation.min.css">
   <link rel="stylesheet" type="text/css" href="styles.css">
   <link rel="icon" type="image/png" href="../../photos/smileicon.png">
 
@@ -18,37 +17,44 @@
       <a href="index.html" class="hoverable" id="len1">home</a>
       <a href="catalogue.html" class="hoverable site">catalogue</a>
       <a href="wishlist.html" class="hoverable" id="len2">wishlist</a>
-      <a href="404.html" class="hoverable" id="len3"><p>graveyard</p></a>
-      <a href = "404.html" class="hoverable" id="len4"><p>contact</p></a>
+      <a href="graveyard.html" class="hoverable" id="len3"><p>graveyard</p></a>
+      <a href = "contact.html" class="hoverable" id="len4"><p>contact</p></a>
     </div>
   </nav>
 
   <div class="catalogue">
-    <div class="catalogue-description">
+    <div class="description catalogue-description">
       <h2>Stuffed Animal Catalogue</h2>
-      <p>Click any of the rows below to learn more about that stuffie.<br>This page is still a work in progress, so if it doesn't work, that page probably hasn't been created yet. Try again later!
-      </p>
+      <p>This is a catalogue of all of my stuffed animals.<br><br>
+
+        The <u><em>'squishmallows'</em></u> tab has all of my squishmallows
+        and information about them. You can also check whether a squishmallow is
+        up for trade/sale (UFT/UFS) in the last column.
+        Go to the contact page to ask me about a trade/sale<br><br>
+
+        The <u><em>'others'</em></u> tab has other miscellaneous stuffed animals
+        from my collection. They are not UFT/UFS.</p>
     </div>
 
     <div class="table-container">
 
-      <div class="tab catalogue-buttons">
+      <div class="tab">
         <button class="tablinks catalogue-button" onclick="openCity(event, 'squishmallows-table')" id="squishmallows-tab"><p>squishmallows</p></button>
         <button class="tablinks catalogue-button" onclick="openCity(event, 'others-table')" id="others-tab"><p>others</p></button>
-        <button class="tablinks catalogue-button" onclick="openCity(event, 'all-table')" id="all-tab"><p>all</p></button>
+        <!-- <button class="tablinks catalogue-button" onclick="openCity(event, 'all-table')" id="all-tab"><p>all</p></button> -->
       </div>
 
       <div id="squishmallows-table" class="tabcontent">
         <table class="fold-table">
           <tr class="catalogue-table-header">
             <th class="not-sortable"></th>
-            <th class= "table-header" data-column="name" data-order="desc">name &#9654;</th>
             <th class= "table-header" data-column="squishName" data-order="desc">squish name &#9654;</th>
+            <th class= "table-header" data-column="name" data-order="desc">nickname &#9654;</th>
             <th class= "table-header" data-column="animal" data-order="desc">animal &#9654;</th>
             <th class= "table-header" data-column="sizeRank" data-order="desc">size &#9654;</th>
-            <!-- <td class="not-sortable">birthday/<br>date acquired</td> -->
+            <th class= "table-header" data-column="ufsuft" data-order="desc">UFT/<br>UFS &#9654;</th>
           </tr>
-          <tbody id='squishmallowTable'>
+          <tbody id='squishmallowsTable'>
             <script type="text/javascript" src="catalogue-java.js"></script>
           </tbody>
         </table>
@@ -58,34 +64,121 @@
         <table class="fold-table">
           <tr class="catalogue-table-header">
             <th class="not-sortable"></th>
-            <th data-column="name" data-order="desc">name &#9654;</th>
-            <!-- <th data-column="squishName" data-order="desc">squish name &#9654;</th> -->
-            <th data-column="animal" data-order="desc">animal &#9654;</th>
-            <th data-column="sizeRank" data-order="desc">size &#9654;</th>
-            <!-- <td class="not-sortable">birthday/<br>date acquired</td> -->
+            <th>name</th>
+            <th>animal</th>
+            <th>birthday</th>
           </tr>
           <tbody id='othersTable'>
-            <script type="text/javascript" src="catalogue-java.js"></script>
+            <tr>
+              <td><img src="photos/non-squish/cornwallace.jpeg"/></td>
+              <td>Cornwallace</td>
+              <td>Umbreon (Pokemon)</td>
+              <td>Oct. 31</td>
+            </tr>
+            <tr>
+              <td><img src="photos/non-squish/everett.jpeg"></td>
+              <td>Everett</td>
+              <td>Evie (Pokemon)</td>
+              <td>May. 30</td>
+            </tr>
+            <tr>
+              <td><img src="photos/non-squish/gerald.jpeg"/></td>
+              <td>Gerald</td>
+              <td>Pikachu (Pokemon)</td>
+              <td>Nov. 7</td>
+            </tr>
+            <tr>
+              <td><img src="photos/non-squish/green-bean.jpeg"/></td>
+              <td>Green Bean</td>
+              <td>Dog</td>
+              <td>April 1</td>
+            </tr>
+            <tr>
+              <td><img src="photos/non-squish/harold.jpeg"/></td>
+              <td>Harold</td>
+              <td>Hedgehog</td>
+              <td>Oct. 4</td>
+            </tr>
+            <tr>
+              <td><img src="photos/non-squish/jerome.jpeg"/></td>
+              <td>Jerome</td>
+              <td>Snail</td>
+              <td>Dec. 30</td>
+            </tr>
+            <tr>
+              <td><img src="photos/non-squish/lima-bean.jpeg"/></td>
+              <td>Lima Bean</td>
+              <td>Cat</td>
+              <td>July 27</td>
+            </tr>
+            <tr>
+              <td><img src="photos/non-squish/richard.jpeg"/></td>
+              <td>Richard</td>
+              <td>Raccoon</td>
+              <td>April 28</td>
+            </tr>
+            <tr>
+              <td><img src="photos/non-squish/seal-cat.jpeg"/></td>
+              <td>Samuel</td>
+              <td>Cat</td>
+              <td>Jan. 22</td>
+            </tr>
+            <tr>
+              <td><img src="photos/non-squish/sleepachu.jpeg"/></td>
+              <td>Sleepachu</td>
+              <td>Pikachu (Pokemon)</td>
+              <td>Sept. 7</td>
+            </tr>
+            <tr>
+              <td><img src="photos/non-squish/stephen.jpeg"/></td>
+              <td>Stephen</td>
+              <td>Dog (Corgi)</td>
+              <td>Nov. 28</td>
+            </tr>
+            <tr>
+              <td><img src="photos/non-squish/tiger-cat.jpeg"/></td>
+              <td>Tony</td>
+              <td>Cat</td>
+              <td>Jan. 22</td>
+            </tr>
+            <tr>
+              <td><img src="photos/non-squish/puffer-fish.jpeg"/></td>
+              <td>~</td>
+              <td>Puffer Fish</td>
+              <td>Feb. 17</td>
+            </tr>
+            <tr>
+              <td><img src="photos/non-squish/hedgehog.jpeg"/></td>
+              <td>~</td>
+              <td>Hedgehog</td>
+              <td>Feb. 14</td>
+            </tr>
+            <tr>
+              <td><img src="photos/non-squish/bee.jpeg"/></td>
+              <td>~</td>
+              <td>Bee</td>
+              <td>Feb. 14</td>
+            </tr>
           </tbody>
         </table>
       </div>
 
-      <div id="all-table" class="tabcontent">
+      <!-- <div id="all-table" class="tabcontent">
         <table class="fold-table">
           <tr class="catalogue-table-header">
-            <td class="not-sortable"></td>
-            <th data-column="name" data-order="desc">name &#9654;</th>
-            <th data-column="squishName" data-order="desc">squish name &#9654;</th>
-            <th data-column="animal" data-order="desc">animal &#9654;</th>
-            <th data-column="sizeRank" data-order="desc">size &#9654;</th>
-            <!-- <td class="not-sortable">birthday/<br>date acquired</td> -->
+            <th class="not-sortable"></th>
+            <th class= "table-header" data-column="name" data-order="desc">nickname &#9654;</th>
+            <th class= "table-header" data-column="squishName" data-order="desc">squish name &#9654;</th>
+            <th class= "table-header" data-column="animal" data-order="desc">animal &#9654;</th>
+            <th class= "table-header" data-column="sizeRank" data-order="desc">size &#9654;</th>
+            <th class= "table-header" data-column="ufsuft" data-order="desc">up for sale/<br>trade &#9654;</th>
           </tr>
           <tbody id='allTable'>
             <script type="text/javascript" src="catalogue-java.js"></script>
           </tbody>
         </table>
       </div>
-    </div>
+    </div> -->
 
 
   </div>
@@ -93,6 +186,20 @@
   <script src="java-files/jquery-3.6.0.js"></script>
   <script src="java-files/jquery-ui.js"></script>
   <script src="catalogue-java.js"></script>
+  <script type="text/javascript" src="catalogue-java1.js"></script>
+
+
+  <!-- <script>
+  function toggle() {
+    var x = document.getElementById("Bartholomew");
+
+    if (x.style.display === "none") {
+      x.style.display = "block";
+    } else {
+      x.style.display = "none";
+    }
+  }
+  </script> -->
 
 </body>
 
