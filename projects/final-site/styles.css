@@ -1125,7 +1125,9 @@ GRAVEYARD
   margin: 40px;
 }
 
-
+.graveyard-description p {
+  color: white;
+}
 
 
 /*
