@@ -352,7 +352,7 @@ var squishmallowsTable = [
     {img:'clam-shell',
     name:'Clam Shell',
     squishName: 'Cyan',
-    animal:'Blue Whale',
+    animal:'Whale',
     sizeOwned:'7.5"',
     sizeRank: '07.5',
     birthday:'Feb. 13',

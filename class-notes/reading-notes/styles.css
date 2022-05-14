@@ -1,0 +1,100 @@
+@font-face {
+  font-family: RetroComputer;
+  src: url('../../fonts/retro_computer_personal_use.ttf');
+}
+
+@font-face {
+  font-family: OffsettRegular;
+  src: url('../../fonts/offsett/OffsettRegular.ttf');
+}
+
+@font-face {
+  font-family: radiospacebitmap;
+  src: url('../../fonts/radio-space-bitmap/radiospacebitmap.woff2') format('woff2'), url('../../fonts/radio-space-bitmap/radiospacebitmapp.woff') format('woff');
+  font-weight: normal;
+  font-syle: normal;
+}
+
+*{
+  background-color: black;
+
+  text-align: center;
+}
+
+/*
+
+
+
+
+
+MAIN STUFF
+
+
+
+
+
+*/
+
+body {
+  margin: 100px;
+  display: flex;
+  justify-content: center;
+}
+
+.container {
+  min-width: 500px;
+  max-width: 50%;
+}
+
+h4 {
+  color: #33FF00;
+  font-family: radiospacebitmap;
+  font-size: 48px;
+}
+
+p {
+  color: #33FF00;
+  font-family: RetroComputer;
+  font-size: 16px;
+}
+
+li {
+  color: #33FF00;
+  font-family: RetroComputer;
+  font-size: 16px;
+}
+
+a {
+  color: #33FF00;
+}
+
+details summary {
+  color: #33FF00;
+  font-family: RetroComputer;
+  font-size: 16px;
+}
+
+button {
+  border: #33FF00 solid 1px;
+  font-family: RetroComputer;
+  font-size: 16px;
+  color: #33FF00;
+  transition: .5s;
+}
+
+button:hover {
+  animation: blink 1s ease-in-out infinite;
+}
+
+
+@keyframes blink {
+  0% {
+    color: #33FF00;
+  }
+  50% {
+    color: black;
+  }
+  100% {
+    color: #33FF00;
+  }
+}
