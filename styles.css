@@ -132,18 +132,6 @@ a:hover, summary:hover {
   animation: blink 1s ease-in-out infinite;
 }
 
-@keyframes blink {
-  0% {
-    color: #33FF00;
-  }
-  50% {
-    color: black;
-  }
-  100% {
-    color: #33FF00;
-  }
-}
-
 .main-list-item, summary {
   margin-bottom: 12px;
 }
@@ -155,4 +143,85 @@ a:hover, summary:hover {
 .sub-list-item {
   font-size: 14px;
   /* margin-bottom: 4px; */
+}
+
+.typewriter {
+  overflow: hidden; /* Ensures the content is not revealed until the animation */
+  border-right: 4px solid #33FF00; /* The typwriter cursor */
+  white-space: nowrap; /* Keeps the content on a single line */
+  margin: 0 auto; /* Gives that scrolling effect as the typing happens */
+  letter-spacing: 5px; /* Adjust as needed */
+  animation:
+    typing 2.5s steps(20, end),
+    blink-caret .5s step-end infinite;
+}
+
+.delay1 {
+  overflow: hidden; /* Ensures the content is not revealed until the animation */
+  border-right: 4px solid #33FF00; /* The typwriter cursor */
+  white-space: nowrap; /* Keeps the content on a single line */
+  margin: 0 auto; /* Gives that scrolling effect as the typing happens */
+  letter-spacing: .15em; /* Adjust as needed */
+  animation:
+    typing1 5s steps(70, end),
+    blink-caret .5s step-end infinite;
+  animation-delay: 3s;
+}
+
+.delay1::before {
+  color: black;
+}
+
+.delay1::after {
+  color: #33FF00;
+}
+
+.delay2 {
+  overflow: hidden; /* Ensures the content is not revealed until the animation */
+  border-right: 4px solid #33FF00; /* The typwriter cursor */
+  white-space: nowrap; /* Keeps the content on a single line */
+  margin: 0 auto; /* Gives that scrolling effect as the typing happens */
+  letter-spacing: .15em; /* Adjust as needed */
+  animation:
+    typing2 3.5s steps(30, end),
+    blink-caret .5s step-end infinite;
+  animation-delay: 8s;
+}
+
+.no-margin {
+  margin-bottom: 0;
+}
+
+/* The typing effect */
+@keyframes typing {
+  from { width: 0 }
+  to { width: 725px; }
+}
+
+@keyframes typing1 {
+  from { width: 0 }
+  to { width: 1000px; }
+}
+
+@keyframes typing2 {
+  from { width: 0 }
+  to { width: 500px; }
+}
+
+/* The typewriter cursor effect */
+@keyframes blink-caret {
+  from, to { border-color: transparent }
+  50% { border-color: #33FF00 }
+}
+
+@keyframes blink {
+  0% {
+    color: #33FF00;
+  }
+  50% {
+    color: black;
+  }
+  100% {
+    color: #33FF00;
+  }
 }
