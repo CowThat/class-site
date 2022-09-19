@@ -1021,8 +1021,8 @@ tbody:last-of-type {
 }
 
 .view {
-  border-bottom: dotted rgba(98, 191, 237, 0.4);
-
+  /* border-bottom: dotted rgba(98, 191, 237, 0.4); */
+  border-bottom: solid rgba(98, 191, 237, 0.4);
 }
 
 td.fold {
@@ -1042,6 +1042,10 @@ div.fold-content p {
 
 .table-header:hover {
   cursor: pointer !important;
+}
+
+tr.fold {
+  display: none; // comment out to show second row
 }
 
 
@@ -1143,6 +1147,10 @@ MEDIA SCREENS
 
 @media screen and (max-width: 1150px) {
 
+  h1{
+    font-size: 40px
+  }
+
   .table-container th {
     font-size: 12px;
   }
@@ -1157,7 +1165,11 @@ MEDIA SCREENS
 
 @media screen and (max-width: 600px) {
 
-  p {
+  h1 {
+    font-size: 20px
+  }
+
+  p :not(a.hoverable) {
     font-size: 16px;
   }
 
